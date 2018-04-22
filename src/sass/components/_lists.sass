@@ -1,22 +1,23 @@
-////
-/// @group Lists
-////
+// Lists.
+$list-font-size: 14px
 
-/// @ignore Font size.
-$list-size: 13
-
-ul.links
-  @extend .simple-list
-  +font-size($list-size)
-  line-height: 1.5
+ul
+  &.links
+    @extend .simple-list
+    font-size: get-rem($list-font-size)
+    line-height: 1.5
 
 .item-list
-  h2, h3, h4
-    +margin-bottom(8)
+  h2,
+  h3,
+  h4
+    margin-bottom: .5rem
+
   ul
     @extend .simple-list
+
     li
-      +margin-left(0)
+      margin-left: 0
 
 .tips
-  +padding-left(19)
+  padding-left: 1.5rem

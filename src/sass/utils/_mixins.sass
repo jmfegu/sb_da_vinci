@@ -1,8 +1,14 @@
+// TODO: Refactorizar los mixins, eliminar los que no se usen y no tengan sentido.
+// TODO: De todos los mixins para los iconos que hice, estudiar bien con cual nos quedamos.
+
 ////
 /// Mixins.
 /// @link http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
 /// @group mixins
 ////
+
+=here($color: $red)
+  border: 2px solid $color
 
 =position($position, $valor1)
   position: $position
@@ -235,7 +241,7 @@
   color: $cl
   border-radius: 3px
   border: solid 2px $br
-  font-family: $font-title
+  font-family: $font-family-title
   +font-size(16)
   text-decoration: none
   text-transform: uppercase
@@ -247,6 +253,7 @@
   &:active
     background: darken($bg, 25%)
 
+// ICONOS DE IAC.
 
 /// Flex gallery
 /// @param {number} $items - Numbers of items for row to show.
@@ -255,12 +262,162 @@
 /// - Then, apply the mixin to each item.
 
 =flex-gallery($items)
-  width: (100% - (gutter() * ($items - 1))) / $items
+  width: (100% - (2% * ($items - 1))) / $items
   @if $items == 1
     margin-bottom: 1rem
   @else
-    margin-bottom: gutter()
+    margin-bottom: 2%
+
   &:nth-child(#{$items}n)
     margin-right: 0
+
   &:not(:nth-child(#{$items}n))
-    margin-right: gutter()
+    margin-right: 2%
+
+=ico-text($image, $width, $height: $width)
+  padding-left: calc(#{$width} + .5rem)
+  position: relative
+
+  &:before
+    background-image: url('../images/#{$image}')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: contain
+    content: ''
+    display: block
+    height: $height
+    left: 0
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: $width
+
+=icomoon($image, $font-size, $color, $size: $font-size, $bg-color: transparent, $br-radius: 0, $pseudo: before)
+  @extend .hide-accessible
+
+  &:#{$pseudo}
+    align-items: center
+    background-color: $bg-color
+    border-radius: $br-radius
+    color: $color
+    content: $image
+    display: flex
+    font-family: $davinci-font
+    font-size: get-rem($font-size)
+    height: get-rem($size)
+    justify-content: center
+    line-height: 1
+    width: get-rem($size)
+
+=icomoon-text($image, $font-size, $color, $pseudo: before, $position: center, $side: left, $size: $font-size, $bg-color: transparent, $br-radius: 0)
+  position: relative
+  @if $side == right
+    padding-right: #{$size}
+  @else
+    padding-left: #{$size}
+
+  &:#{$pseudo}
+    align-items: center
+    background-color: $bg-color
+    border-radius: $br-radius
+    color: $color
+    content: $image
+    display: flex
+    font-family: $davinci-font
+    font-size: get-rem($font-size)
+    height: get-rem($size)
+    justify-content: center
+    line-height: 1
+    position: absolute
+    width: get-rem($size)
+    @if $side == right
+      right: 0
+    @else
+      left: 0
+    @if $position == top
+      top: 0
+    @else if $position == bottom
+      bottom: 0
+    @else
+      top: 50%
+      transform: translate(0, -50%)
+
+=icomoon-v2($image, $size, $color, $pseudo: before)
+  @extend .hide-accessible
+  display: block
+  height: $size
+  position: relative
+  width: $size
+
+  &:#{$pseudo}
+    color: $color
+    content: $image
+    font-family: $davinci-font
+    font-size: $size
+    left: 50%
+    line-height: 1
+    position: absolute
+    top: 50%
+    transform: translate(-50%, -50%)
+
+=image-cover
+  overflow: hidden
+  position: relative
+
+  img
+    height: auto
+    left: 50%
+    max-width: none
+    min-height: 100%
+    min-width: 100%
+    position: absolute
+    top: 50%
+    transform: translate(-50%, -50%)
+    width: auto
+
+// Absolute link
+=absolute-link
+  background: none
+  display: block
+  font-size: 0
+  height: 100%
+  left: 0
+  margin: 0
+  padding: 0
+  position: absolute
+  top: 0
+  width: 100%
+
+  &:hover
+    background: none
+
+=gradient($direction: to top, $color-from: transparent, $color-to: transparent, $pseudo: after)
+  position: relative
+
+  &:#{$pseudo}
+    background: linear-gradient(#{$direction}, #{$color-from}, #{$color-to})
+    content: ''
+    display: block
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+
+// MIXINS DE Hugo Giraudel
+
+/// Slightly lighten a color
+/// @access public
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function tint($color, $percentage)
+  @return mix(white, $color, $percentage)
+
+/// Slightly darken a color
+/// @access public
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function shade($color, $percentage)
+  @return mix(black, $color, $percentage)

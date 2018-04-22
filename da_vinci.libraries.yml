@@ -6,14 +6,15 @@ global-css:
 global-js:
   header: true
   js:
-    js/da-vinci.js: {}
-    js/custom.js: {}
-    js/svg.js: {}
-    js/rwd.js: {}
     js/vendors/jquery.unevent.js: {}
     js/vendors/jquery.viewport.js: {}
     js/vendors/css_browser_selector.js: {}
     js/utils/menu-svg.js: {}
+    js/da-vinci.js: {}
+    js/custom.js: {}
+    js/svg.js: {}
+    js/search.js: {}
+    js/rwd.js: {}
   dependencies:
     - core/jquery
     - core/modernizr

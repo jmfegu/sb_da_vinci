@@ -1,166 +1,74 @@
+// TODO:
+// -Intentar quitar los important si fuese posible.
+// FIXME:
+// - Quitar ids.
+
+$header-background-color: $secondary-color
+
+// Header.
 .layout-container
-  padding-top: 0 !important
 
   > header
     z-index: 2
 
-  .site-header
-    +padding(10, 10, 10, 10)
-    align-items: center
-    display: flex
-    flex-direction: row-reverse
-    flex-wrap: wrap
+    .wrapper-header
+      background-color: $header-background-color
 
-    .wrapper
+    .site-header
       align-items: center
       display: flex
-      flex-direction: inherit
+      flex-direction: row-reverse
+      flex-wrap: wrap
 
-  .region-header
-    align-content: center
-    align-items: center
-    display: flex
-    flex-grow: 1
-    justify-content: space-between
-
-    .block-system-branding-block
-      .site-name
-        +breakpoint(0 $medium)
-          display: none
-      +breakpoint(0 $small)
-        +padding(10, 10, 10, 10)
-        align-items: flex-start
+      .wrapper
+        align-items: center
         display: flex
-        flex-direction: column
-  +breakpoint(0 $medium)
-    padding: 0
-  +breakpoint($monster)
-    padding: vw-calc(0) 0
+        flex-direction: inherit
 
-  .menu-slide-action
-    +width(50)
-    +height(50)
-    cursor: pointer
-    position: relative
-    z-index: 8
-
-    #menu-svg
-      height: vw-calc(32)
-      position: absolute
-      width: vw-calc(32)
-
-    svg
-      height: vmin-calc(50) !important
-      position: absolute
-      top: 0
-      width: vmin-calc(50) !important
-      +breakpoint($monster)
-        height: vw-calc(44) !important
-        top: vw-calc(-9)
-        width: vw-calc(44) !important
-      path,
-      a,
-      g
-        fill: $main-color
-        transition: fill 2s ease
-    +breakpoint($medium)
-      display: none
-    +breakpoint($monster)
-      margin: vw-calc(10) 0
-
-  .block-system-branding-block
-    align-items: center
-    display: flex
-    .site-logo
-      margin: vmin-calc(14) 0 vmin-calc(10) 0
-      margin-right: vmin-calc(15)
-      z-index: 999
-    +breakpoint($monster)
-      margin: vw-calc(14) 0 vw-calc(10) 0
-      margin-right: vw-calc(69)
-      margin-left: vw-calc(40)
-      transform: scale(1.5)
-
-  .block-search
-    form
-      display: flex
+    .region-header
       align-items: center
-  nav
-    ul
-      margin: 0
-      padding: 0
-      li
-        margin: vmin-calc(15) 0 vmin-calc(14) 0
-        margin-right: vmin-calc(32)
-        padding: 0
-        +breakpoint($large)
-          display: inline-block
-        +breakpoint($monster)
-          margin: vw-calc(15) 0 vw-calc(14) 0
-          margin-right: vw-calc(32)
-      &.is-visible
-        border-color: $white
-        a
-          color: $white
-      a
-        text-transform: uppercase
-      &:active, .is-active
-        color: $white
-        &:hover
-          color: $red
+      display: flex
+      flex-grow: 1
+      justify-content: flex-end
 
-  .menu--account
-    display: block
-    position: relative
-    h2
-      @extend .hide-accesible
-      display: block
-      width: 42px
-      height: 42px
-      background-image: url('../images/ico-user.svg')
-      background-repeat: no-repeat
-      background-position: 0 0
-      background-size: 100%
-      float: right
-      background-color: red
-      border: none !important
-    &:hover
-      > h2
-        background-position: 0 0
-        transition: 0.2s
-        border: none
-      > ul
-        opacity: 1
-        visibility: visible
-        transition: 0.2s
-    &.active
-      > h2
-        +breakpoint(0 $medium)
-          background-color: red
-          background-position: 0 0
-      > ul
-        +breakpoint(0 $large)
-          opacity: 1
-          visibility: visible
-          transition: 0.2s
-    > ul
-      display: block !important
-      background-color: $main-color
-      min-width: 200px
-      opacity: 0
-      position: absolute
-      z-index: 99999
-      right: 0px
-      top: 57px
-      visibility: hidden
-      transition: 0.2s
-      li
-        &.menu-item--active-trail
-          a
-            color: $white
-      a
-        color: $white
-        display: block
-        &:hover
-          color: $white
-          text-decoration: underline
+      > *
+        &:not(:first-child)
+          margin-left: 1rem
+
+      .block-system-branding-block
+        margin-right: auto
+
+    .menu-slide-action
+      +width(50)
+      +height(50)
+      cursor: pointer
+      position: relative
+      z-index: 8
+      +breakpoint($medium)
+        display: none
+      +breakpoint($monster)
+        margin: vw-calc(10) 0
+
+      #menu-svg
+        height: vw-calc(32)
+        position: absolute
+        width: vw-calc(32)
+
+      svg
+        height: vmin-calc(50) !important
+        position: absolute
+        top: 0
+        width: vmin-calc(50) !important
+        +breakpoint($monster)
+          height: vw-calc(44) !important
+          top: vw-calc(-9)
+          width: vw-calc(44) !important
+
+        path,
+        a,
+        g
+          fill: $main-color
+          transition: fill 2s ease
+
+
+

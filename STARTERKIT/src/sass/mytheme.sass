@@ -1,35 +1,27 @@
-*,
-*::before,
-*::after
-  box-sizing: border-box
+@charset 'utf-8'
 
-// Libsass {Libraries}.
-@import '../../node_modules/susy/sass/susy'
-@import '../../node_modules/breakpoint-sass/stylesheets/breakpoint'
-//@import '../../node_modules/slick-carousel/slick/slick.scss'
-//@import '../../node_modules/slick-carousel/slick/slick-theme.scss'
+// Resources (Dev libraries & utils)
+@import 'resources'
 
-// Utils {Tools} & Base {Skinr & Grid Framework}.
-@import 'utils/variables-colors'
-@import 'utils/variables-breakpoints'
-@import 'utils/functions'
-@import 'utils/mixins'
+// Base {External component}.
 @import 'base/skinr'
-@import 'base/susy'
-@import 'utils/keyframes'
-@import 'utils/helpers'
 
 // Components {External component}.
 //@import 'components/vendors/slick'
 
-// Components {Drupal elements}.
+// Components {Drupal components}.
 @import 'components/*'
 
 // Layout Regions {Blocks, Forms, Nodes, Regions, Pages & Views}.
-@import 'layout/layout'
-@import 'layout/regions/*'
-@import 'layout/blocks/**/*'
+@import 'layout/blocks/general/*'
 @import 'layout/forms/*'
+@import 'layout/layout'
+@import 'layout/menus/*'
 @import 'layout/nodes/*'
 @import 'layout/pages/*'
+@import 'layout/regions/*'
 @import 'layout/views/*'
+
+// Libsass {Libraries}.
+//@import '../../node_modules/slick-carousel/slick/slick.scss'
+//@import '../../node_modules/slick-carousel/slick/slick-theme.scss'

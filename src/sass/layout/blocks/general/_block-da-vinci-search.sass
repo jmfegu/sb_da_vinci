@@ -1,0 +1,40 @@
+// Search block
+$search-icon-color: $white
+$search-icon-active-color: $secondary-color
+
+.search-block-form
+  align-items: center
+  display: flex
+  flex-flow: row wrap
+
+  &.active
+    .form-search
+      opacity: 1
+      transition: .2s
+      visibility: visible
+
+    .ico-search
+      +icomoon($ico-close, 24px, $search-icon-active-color, 32px)
+      transition: .2s
+      z-index: 1
+
+  form
+    .form-search
+      height: 100%
+      max-width: get-rem(400px)
+      opacity: 0
+      padding-right: 2rem
+      position: absolute
+      right: 0
+      top: 0
+      transition: .2s
+      visibility: hidden
+      width: 100%
+
+    .form-actions
+      display: none
+
+  .ico-search
+    +icomoon($ico-search, 24px, $search-icon-color, 32px)
+    cursor: pointer
+    transition: .2s

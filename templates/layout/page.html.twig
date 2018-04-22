@@ -48,19 +48,31 @@
 <div class="layout-container">
 
 
-  <header role="banner" aria-label="{{ 'Site header'|t}}">
+  <header aria-label="{{ 'Site header'|t}}">
+
     {% if page.top_bar %}
       <div class="top-bar">
         {{ page.top_bar }}
       </div>
     {% endif %}
-    <div class="site-header">
-      {% if page.secondary_menu %}
-        {{ page.secondary_menu }}
-      {% endif %}
-      {{ page.header }}
+
+    <div class="wrapper-header">
+
+      <div class="site-header">
+
+        {% if page.secondary_menu %}
+          {{ page.secondary_menu }}
+        {% endif %}
+
+        {% if page.header %}
+          {{ page.header }}
+        {% endif %}
+
+      </div>
+
     </div>
   </header>
+
   {% if page.sliding_menu %}
     <nav class="js-menu sliding-panel-content">
       {{ page.sliding_menu }}
@@ -75,7 +87,9 @@
   {% endif %}
 
   {% if page.breadcrumb %}
+  <div class="site-breadcrumb">
     {{ page.breadcrumb }}
+  </div>
   {% endif %}
 
   {% if page.featured_top %}
@@ -106,7 +120,7 @@
         {{ page.sidebar_second }}
       </aside>
       {% endif %}
-      
+
     </div>
   </main>
 

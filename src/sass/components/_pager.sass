@@ -1,43 +1,7 @@
-////
-/// @group Pager
-/// @type color
-////
-
-/// @ignore Background color active.
-$pager-bg-color-active  : $color
-
-/// @ignore Color.
-$pager-color            : $secondary-color
-
-/// @ignore Color active.
-$pager-color-active     : $white
-
-/// @ignore Font size.
-$pager-size             : 13
+// Pager.
+$pager-bg-color-active: $color
+$pager-color: $secondary-color
+$pager-color-active: $white
+$pager-size: 13px
 
 .pager
-  ul
-    padding: 0
-  &__item
-    display: block
-    +margin(0, 5, 0, 5)
-    a
-      color: $pager-color
-      +font-size($pager-size)
-    &.is-active
-      +width(32)
-      +height(32)
-      line-height: 1.1
-      border-radius: 1.250rem
-      background-color: $pager-bg-color-active
-      font-weight: 400
-      color: $pager-color-active
-      a
-        color: inherit
-        cursor: default
-    &--first,
-    &--previous,
-    &--next,
-    &--last
-      text-transform: lowercase
-      +font-size($pager-size)

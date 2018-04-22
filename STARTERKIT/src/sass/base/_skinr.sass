@@ -1,160 +1,129 @@
 ////
 /// @group skinr
+/// @type color
 ////
 
-/// @ignore Font title.
-// $font-title: 'Roboto Condensed', sans-serif
 /// @ignore Font Default.
-// $font-default: 'Roboto', sans-serif
-/// @ignore Font Mono.
-// $font-mono: 'Roboto Mono', monospace
+$font-family-default: $roboto
 
-/// @ignore Colors.
-/// @type color
-// $color: $dark-grey
+/// @ignore Font title.
+$font-family-title: $roboto-condensed
 
-/// @ignore Colors.
-/// @type color
-// $color-body: $grey
+/// @ignore Font size.
+$font-size-default: $rem-base
 
-/// @ignore Colors.
-/// @type color
-// $main-color: $red
+/// @ignore Color body.
+$color-body: $grey
 
-/// @ignore Colors.
-/// @type color
-//$secondary-color: $dark-blue
+/// @ignore Color title.
+$color-title: $secondary-shade-color
 
-/// @ignore Colors.
-/// @type color
-// $light-color: $light-grey
+/// @ignore Color link.
+$color-link: $main-color
 
-/// @ignore Colors.
-/// @type color
-// $border: $light-grey
+/// @ignore Color link hover.
+$color-link-hover: tint($color-link, 15%)
 
-// $shadow: hsl(0, 0%, 53%)
+// Font size for html.
+html
+  font-size: $font-size-default
 
-/// @ignore Colors.
-/// @type color
-// $color-h: $dark-blue
-
-/// @ignore Colors.
-/// @type color
-// $color-a: $red
-
-/// @ignore Colors.
-/// @type color
-// $color-a-hover: lighten($color-a, 15%)
-
-/// @ignore Measurement.
-
-$rem-base: 16px
-/// @ignore Measurement.
-$vw-base: 1.1111vw
-
-
-/// Font size for html.
-// html
-  font-size: 1rem
-
-/// Styles for body.
-// body
+// Styles for body.
+body
+  background-color: $cream
   color: $color-body
-  font-family: $font-default
+  font-family: $font-family-default
   font-weight: 400
   line-height: 1.3
 
-  main
-    +padding(0, 20, 0, 20)
-
-  .layout-container
-    background: $cream
-
-/// General styles for titles.
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6
-  color: $color-h
-  font-family: $font-title
+// General styles for titles.
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  color: $color-title
+  font-family: $font-family-title
   font-weight: 700
   margin: 1rem 0 .5rem
 
-/// Specific style for h1.
-// h1
-  +font-size(64)
+// Specific style for h1.
+h1
+  font-size: get-rem(44px)
   line-height: 1
+  margin: 0
 
-/// Specific style for h2.
-// h2
-  +font-size(48)
+// Specific style for h2.
+h2
+  font-size: get-rem(40px)
 
-/// Specific style for h3.
-// h3
-  +font-size(36)
+// Specific style for h3.
+h3
+  font-size: get-rem(36px)
 
-/// Specific style for h4 and h5.
-// h4,
-// h5
-  +font-size(24)
+// Specific style for h4.
+h4
+  font-size: get-rem(32px)
 
-/// Specific style for h4 and h6.
-// h4,
-// h6
-  font-family: $font-default
-  font-weight: 700
+// Specific style for h5.
+h5
+  font-size: get-rem(28px)
 
-/// Specific style for h5.
-// h5
-  font-family: $font-default
-  font-weight: 400
+// Specific style for h6.
+h6
+  font-size: get-rem(24px)
 
-/// Specific style for paragraph.
-// p
+
+// Specific style for paragraph.
+p
   margin: 0 0 1.2rem
 
-/// Styles for link.
-// a
-  color: $color-a
+// Styles for link.
+a
+  color: $color-link
+  display: inline-block
   text-decoration: none
   transition: color .2s
 
   &:hover
-    color: $color-a-hover
+    color: $color-link-hover
     text-decoration: none
 
   &.icon-help
-    +font-size(13)
+    font-size: get-rem(14px)
 
-/// Font in bold.
-// strong
+// Font in bold.
+strong
   font-weight: 700
 
-// mark,
-// .marker
-  +font-size(10)
-  +padding(6, 6, 6, 6)
+mark,
+.marker
   background-color: $grey
   color: $white
   float: right
+  font-size: get-rem(14px)
+  padding: .5rem
 
-// summary
+summary
   outline: none
 
-// blockquote
-  font-family: $font-title
+blockquote
+  border: 3px solid $main-color
   color: $grey
-  margin: vmin-calc(24) 0 vmin-calc(24) vmin-calc(8)
-  +padding-left(16)
-  +font-size(24)
-  +border(3, solid, $red)
+  font-family: $font-family-title
+  font-size: get-rem(24px)
+  margin: 1.5rem 0 1.5rem .5rem
+  padding-left: 1rem
   +breakpoint($medium)
-    margin: vw-calc(24) 0 vw-calc(24) vw-calc(48)
-  > p:first-child
-    display: inline
+    margin: 1.5rem 0 1.5rem 3rem
 
-// code, kbd, pre, samp
-  +font-size(13)
+  > p
+    &:first-child
+      display: inline
+
+code,
+kbd,
+pre,
+samp
+  font-size: get-rem(13px)

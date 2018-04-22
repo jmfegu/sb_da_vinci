@@ -1,0 +1,158 @@
+{
+  "selection": [
+    {
+      "order": 14,
+      "name": "user",
+      "prevSize": 32
+    },
+    {
+      "order": 4,
+      "name": "chevron-up",
+      "prevSize": 32
+    },
+    {
+      "order": 9,
+      "name": "chevron-right",
+      "prevSize": 32
+    },
+    {
+      "order": 13,
+      "name": "chevron-left",
+      "prevSize": 32
+    },
+    {
+      "order": 12,
+      "name": "chevron-down",
+      "prevSize": 32
+    },
+    {
+      "order": 10,
+      "name": "close",
+      "prevSize": 32
+    },
+    {
+      "order": 8,
+      "name": "search",
+      "prevSize": 32
+    }
+  ],
+  "metadata": {
+    "name": "Untitled Set",
+    "importSize": {
+      "width": 24,
+      "height": 24
+    },
+    "iconsHash": 1477841078
+  },
+  "height": 1024,
+  "prevSize": 32,
+  "icons": [
+    {
+      "paths": [
+        "M512.001 170.667c94.257 0 170.667 76.41 170.667 170.667v0c0 94.257-76.41 170.667-170.667 170.667v0c-94.257 0-170.667-76.41-170.667-170.667v0c0-94.257 76.41-170.667 170.667-170.667v0zM512.001 597.333c188.587 0 341.333 76.373 341.333 170.667v85.333h-682.667v-85.333c0-94.293 152.747-170.667 341.333-170.667z"
+      ],
+      "grid": 32,
+      "tags": [
+        "user"
+      ],
+      "defaultCode": 59654
+    },
+    {
+      "paths": [
+        "M316.16 670.080l195.84-195.413 195.84 195.413 60.16-60.16-256-256-256 256 60.16 60.16z"
+      ],
+      "grid": 32,
+      "tags": [
+        "chevron-up"
+      ],
+      "defaultCode": 59650
+    },
+    {
+      "paths": [
+        "M353.92 707.413l195.413-195.413-195.413-195.84 60.16-60.16 256 256-256 256-60.16-60.587z"
+      ],
+      "grid": 32,
+      "tags": [
+        "chevron-right"
+      ],
+      "defaultCode": 59651
+    },
+    {
+      "paths": [
+        "M670.080 707.413l-195.413-195.413 195.413-195.84-60.16-60.16-256 256 256 256 60.16-60.587z"
+      ],
+      "grid": 32,
+      "tags": [
+        "chevron-left"
+      ],
+      "defaultCode": 59652
+    },
+    {
+      "paths": [
+        "M316.16 353.707l195.84 195.84 195.84-195.84 60.16 60.587-256 256-256-256 60.16-60.587z"
+      ],
+      "grid": 32,
+      "tags": [
+        "chevron-down"
+      ],
+      "defaultCode": 59653
+    },
+    {
+      "paths": [
+        "M810.667 273.493l-60.16-60.16-238.507 238.507-238.507-238.507-60.16 60.16 238.507 238.507-238.507 238.507 60.16 60.16 238.507-238.507 238.507 238.507 60.16-60.16-238.507-238.507 238.507-238.507z"
+      ],
+      "grid": 32,
+      "tags": [
+        "close"
+      ],
+      "defaultCode": 59648
+    },
+    {
+      "paths": [
+        "M416 138.667c153.167 0 277.333 124.166 277.333 277.333v0c0 68.693-25.173 131.84-66.56 180.48l11.52 11.52h33.707l213.333 213.333-64 64-213.333-213.333v-33.707l-11.52-11.52c-48.64 41.387-111.787 66.56-180.48 66.56-153.167 0-277.333-124.166-277.333-277.333v0c0-153.167 124.166-277.333 277.333-277.333v0zM416 224c-106.667 0-192 85.333-192 192s85.333 192 192 192c106.667 0 192-85.333 192-192s-85.333-192-192-192z"
+      ],
+      "grid": 32,
+      "tags": [
+        "search"
+      ],
+      "defaultCode": 59649
+    }
+  ],
+  "colorThemes": [],
+  "preferences": {
+    "showGlyphs": true,
+    "showCodes": true,
+    "showQuickUse": true,
+    "showQuickUse2": true,
+    "showSVGs": true,
+    "fontPref": {
+      "prefix": "ico-",
+      "metadata": {
+        "fontFamily": "Da-Vinci",
+        "majorVersion": 1,
+        "minorVersion": 0
+      },
+      "metrics": {
+        "emSize": 1024,
+        "baseline": 22.25,
+        "whitespace": 50
+      },
+      "embed": false,
+      "showSelector": false,
+      "cssVars": true,
+      "cssVarsFormat": "scss",
+      "showMetrics": true
+    },
+    "imagePref": {
+      "prefix": "icon-",
+      "png": true,
+      "useClassSelector": true,
+      "color": 0,
+      "bgColor": 16777215
+    },
+    "historySize": 50,
+    "gridSize": 16,
+    "showGrid": true
+  },
+  "IcoMoonType": "icon-set"
+}

@@ -1,40 +1,34 @@
-//html,
-//body
+html,
+body
   min-height: 100vh
 
-//body
-  color: $color-body
-  background-color: $white
+body
   &.frozen-body
     overflow: hidden
 
 // Base layout: Header, main content, footer.
-//.maintenance-page
+.maintenance-page
   h1
-    text-align: center
     +margin-bottom(8)
+    text-align: center
 
-//.toolbar-fixed.toolbar-horizontal
+.toolbar-fixed.toolbar-horizontal
   .layout-container
     & > header
       +breakpoint(0 $medium)
         top: vmin-calc(60)
 
-//.has-secondary-menu
+.has-secondary-menu
   .layout-container
     // Leave space for the fixed menu.
     padding-top: vw-calc(140)
     +breakpoint(0 $medium)
       padding-top: vmin-calc(96)
 
-//.layout-container
-  // Leave space for the fixed menu.
-  min-height: 100vh
+.layout-container
   display: flex
   flex-direction: column
-  margin: 0
-  +breakpoint(0 $medium)
-    padding-top: vmin-calc(60)
+  min-height: 100vh
 
   &.sliding-panel-visible
     > header
@@ -46,23 +40,30 @@
 
   // Header.
   > header
-    position: inherit
-    background-color: $darker-blue
-    transition: all .2s ease-in
-    top: 0
     width: 100%
-    transform: translateY(0)
-    .region:not(.region-header)
-      +clearfix
-    > *:not(.top-bar),
-    .top-bar > *
+
+    .top-bar
+      padding: .5rem $container-padding
+
+    .wrapper-header
+      padding: $container-padding
+
+    .region-top-bar,
+    .site-header
+      @extend .restricted-container
+
+  // Breadcrumb.
+  .site-breadcrumb
+    padding: 1.5rem $container-padding
+
+    .region-breadcrumb
       @extend .restricted-container
 
   // Main content.
   > main
+    flex-grow: 1
+    padding: $container-padding
     width: 100%
-    .region
-      +clearfix
 
     .layout-wrapper
       @extend .restricted-container
@@ -80,22 +81,29 @@
         width: 100%
         +breakpoint($medium)
           flex-grow: 1
-          width: span(6)
+          width: 50%
 
       aside
         width: 100%
         +breakpoint($medium)
-          width: span(3)
+          width: 23.5%
 
         &.layout-sidebar-first
           +breakpoint($medium)
+            margin-right: 1.5%
             order: -1
-            margin-right: gutter()
 
         &.layout-sidebar-second
           +breakpoint($medium)
-            margin-left: gutter()
+            margin-left: 1.5%
 
-//.ie
+  // Footer.
+  > footer
+    padding: $container-padding * 2 $container-padding
+
+    .footer-wrapper
+      @extend .restricted-container
+
+.ie
   .layout-container
     display: block

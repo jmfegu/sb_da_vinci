@@ -1,6 +1,3 @@
-/**
- * Created by rvergara on 6/02/17.
- */
 'use strict';
 
 /****** DEPENDENCIES ********/

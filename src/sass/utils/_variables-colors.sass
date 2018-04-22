@@ -1,52 +1,70 @@
 ////
-/// @group variables colors
+/// @group Variables colors
 /// @type color
 ////
 
-/// @ignore Colour hover red.
-$red-hover: rgba(181, 36, 41, 0.4)
-
 /// @ignore Colour red.
-$red: rgba(239, 51, 64, 1)
+$red: rgb(239, 51, 64)
 
 /// @ignore Colour light red.
-$light-red: rgba(214, 69, 65, 1)
+$light-red: rgb(214, 69, 65)
 
 /// @ignore Colour dark red.
-$dark-red: rgba(112, 24, 29, 1)
-
-/// @ignore Colour darker blue.
-$darker-blue: rgba(8, 29, 48, 1)
-
-/// @ignore Colour dark blue.
-$dark-blue: rgba(10, 34, 57, 1)
+$dark-red: rgb(112, 24, 29)
 
 /// @ignore Colour blue.
-$blue: rgba(59, 78, 97, 1)
-
-/// @ignore Colour green.
-$green: rgba(59, 147, 118, 1)
-
-/// @ignore Colour yellow.
-$yellow: rgba(251, 219, 167, 1)
+$blue: rgb(10, 34, 57)
 
 /// @ignore Colour darker blue.
-$dark-grey: rgba(108, 122, 136, 1)
+$dark-blue: rgb(8, 29, 48)
+
+/// @ignore Colour green.
+$green: rgb(59, 147, 118)
+
+/// @ignore Colour yellow.
+$yellow: rgb(251, 219, 167)
 
 /// @ignore Colour grey.
-$grey: rgba(157, 167, 176, 1)
+$grey: rgb(157, 167, 176)
+
+/// @ignore Colour darker grey.
+$dark-grey: rgb(108, 122, 136)
 
 /// @ignore Colour light grey.
-$light-grey: rgba(206, 211, 215, 1)
+$light-grey: rgb(206, 211, 215)
 
 /// @ignore Colour lighter grey.
-$lighter-grey: rgba(241, 243, 241, 1)
+$lighter-grey: rgb(241, 243, 241)
 
 /// @ignore Colour scream.
-$cream: rgba(250, 248, 244, 1)
+$cream: rgb(250, 248, 244)
 
 /// @ignore Colour white.
-$white: white
+$white: rgb(255, 255, 255)
 
 /// @ignore Colour black.
-$black: rgba(0, 0, 0, 1)
+$black: rgb(0, 0, 0)
+
+/// @ignore Colour color.
+$color: $dark-grey
+
+/// @ignore Colour light-color.
+$light-color: $light-grey
+
+/// @ignore Colour main-color.
+$main-color: $red
+
+/// @ignore Colour secondary-color.
+$secondary-color: $blue
+
+/// @ignore Colour secondary-shade-color.
+$secondary-shade-color: mix($black, $secondary-color, 25%)
+
+/// @ignore Colour secondary-tint-color.
+$secondary-tint-color: mix($white, $secondary-color, 15%)
+
+/// @ignore Colour border.
+$border: $light-grey
+
+/// @ignore Colour shadow.
+$shadow: hsl(0, 0%, 53%)

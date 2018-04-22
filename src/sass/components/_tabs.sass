@@ -1,77 +1,93 @@
-////
-/// @group Tables
-/// @type color
-////
+// Tabs.
+$tabs-primary-link-color: $secondary-color
+$tabs-primary-link-background-color: $white
+$tabs-primary-link-active-background-color: $secondary-color
 
-/// @ignore Background color hover.
-$tabs-bg-color-hover            : transparent
-/// @ignore Color.
-$tabs-color                     : $color
-/// @ignore Font size.
-$tabs-size                      : 10
+$tabs-secondary-link-color: $grey
+$tabs-secondary-link-active-color: $secondary-color
+$tabs-secondary-border-color: $grey
+$tabs-secondary-border-active-color: $secondary-color
 
-/// @ignore Primary background color hover.
-$tabs-primary-bg-color-hover    : $color
-/// @ignore Primary color hover.
-$tabs-primary-color-hover       : $white
+$vertical-tabs-item-background: $white
+$vertical-tabs-item-active-background: $secondary-color
+$vertical-tabs-link-color: $secondary-color
+$vertical-tabs-link-active-color: $white
+$vertical-tabs-item-title-active-color: $white
 
-/// @ignore Secondary background color hover.
-$tabs-secondary-bg-color-hover  : transparent
-/// @ignore Secondary color hover.
-$tabs-secondary-color-hover     : $secondary-color
+nav
+  &.tabs
+    .tabs
+      @extend .simple-list
 
-/// @ignore Vertical background color.
-$tabs-vertical-bg-color         : $main-color
-/// @ignore Vertical color.
-$tabs-vertical-color            : $white
-/// @ignore Vertical color selected.
-$tabs-vertical-color-selected   : $color
+      &:not(:last-child)
+        margin-bottom: .5rem
 
-.block-local-tasks-block
-  width: 100%
+    .primary
+      border-bottom: 1px solid $border
+      display: flex
+      flex-flow: row wrap
 
-.tabs
-  a
-    color: $tabs-color
-    text-transform: uppercase
-    +font-size($tabs-size)
-    &:focus,
-    &:hover
-      background-color: $tabs-bg-color-hover
+      li
+        border-color: $color
+        border-width: 1px 1px 0
+        margin-right: .5rem
 
-  &.primary
-    +border-bottom(1, solid, $color)
-    > li
-      +border(1, solid, $color)
-      +border-bottom(0, solid, $color)
-      > a
-        +padding(6, 24, 6, 24)
-        transition: all 1s ease
-        &:hover,
-        &.is-active
-          background-color: $tabs-primary-bg-color-hover
-          color: $tabs-primary-color-hover
-
-  &.secondary
-    > li
-      margin: 0
-      &:first-child a
-        +padding-left(0)
-        +border-left(0, solid, $color)
-      &:last-child a
-        +padding-right(0)
       a
-        +border-left(1, solid, $secondary-color)
+        background-color: $tabs-primary-link-background-color
+        border-color: $border
+        border-style: solid solid none
+        border-width: 1px 1px 0
+        color: $tabs-primary-link-color
+        padding: .75rem 2.5rem
+
         &:hover,
         &.is-active
-          background-color: $tabs-secondary-bg-color-hover
-          color: $tabs-secondary-color-hover
+          background-color: $tabs-primary-link-active-background-color
+          color: $white
+          transition: .2s
+
+        &:not(.is-active):not(:hover)
+          box-shadow: inset 0 -10px 10px -10px $light-grey
+
+    .secondary
+      display: flex
+      flex-flow: row wrap
+
+      li
+        margin: 0
+
+      a
+        align-items: center
+        border-bottom: 1px solid $tabs-secondary-border-color
+        color: $tabs-secondary-link-color
+        padding: .5rem 2rem
+        transition: .2s
+
+        &.is-active,
+        &:hover
+          background-color: transparent
+          border-color: $tabs-secondary-border-active-color
+          color: $tabs-secondary-link-active-color
+          transition: .2s
+
+
 
 .vertical-tabs
+
   &__menu-item
-    background: $tabs-vertical-bg-color
+    background: $vertical-tabs-item-background
+
     a
-      color: $tabs-vertical-color
-    &.is-selected
+      color: $vertical-tabs-link-color
+      font-size: get-rem(14px)
+      padding: 1rem
+
+    &.is-selected,
+    &:hover
+      background: $vertical-tabs-item-active-background
+
+      a
+        color: $vertical-tabs-link-active-color
+
       .vertical-tabs__menu-item-title
-        color: $tabs-vertical-color-selected
+        color: $vertical-tabs-item-title-active-color

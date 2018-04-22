@@ -1,52 +1,36 @@
-////
-/// @group Buttons
-/// @type color
-////
-
-/// @ignore Background color.
-$btn-bg-color            : $secondary-color
-/// @ignore Background color hover.
-$btn-bg-color-hover      : $white
-
-/// @ignore Color.
-$btn-color               : $white
-/// @ignore Color hover.
-$btn-color-hover         : $secondary-color
-
-/// @ignore Font family.
-$btn-font                : $font-title
-/// @ignore Font size.
-$btn-size                : 10
-
-/// @ignore Border color.
-$btn-border-color        : transparent
-/// @ignore Border color hover.
-$btn-border-color-hover  : $secondary-color
+// Buttons
+$button-background-color: $secondary-color
+$button-hover-background-color: $white
+$button-color: $white
+$button-hover-color: $secondary-color
+$button-font-family: $roboto-condensed
+$button-border-radius: 3px
+$button-border-color: transparent
+$button-hover-border-color: $secondary-color
 
 .button
-  outline: none
+  background-color: $button-background-color
+  border: 1px solid $button-border-color
+  border-radius: $button-border-radius
+  color: $button-color
   display: inline-block
+  font-family: $button-font-family
+  font-weight: 400
+  line-height: 1
+  margin: 0
+  outline: none
+  padding: .75rem 1.5rem
   text-align: center
-  background-color: $btn-bg-color
-  color: $btn-color
   text-transform: uppercase
   transition: all .5s
-  font-family: $btn-font
-  font-weight: 400
-  line-height: vmin-calc(40)
-  border-radius: vmin-calc(3)
-  +padding(0, 24, 0, 24)
-  +font-size($btn-size)
-  +border(1, solid, $btn-border-color)
+
   &:hover
+    background-color: $button-hover-background-color
+    border-color: $button-hover-border-color
+    color: $button-hover-color
     cursor: pointer
     text-decoration: none
-    border-color: $btn-border-color-hover
-    background-color: $btn-bg-color-hover
-    color: $btn-color-hover
+
   &:focus
     outline: none
 
-button
-  &:focus
-    outline: none

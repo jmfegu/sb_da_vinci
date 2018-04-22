@@ -56,12 +56,6 @@
           menu_svg_init.playSegments([0, 14], true)
         }
       }
-
-      // Search Button
-      $('.search-icons-button').on('click', function () {
-          $(this).toggleClass('active');
-          $('.region-header .search-block-form').toggleClass('active');
-      });
     }
   };
 })(jQuery);

@@ -1,16 +1,22 @@
-////
-/// @group Breadcrumb
-/// @type color
-////
-
-/// @ignore Color.
-$breadcrumb-color  : $darker-blue
-
-/// @ignore Font size.
-$breadcrumb-size   : 10
+// Breadcrumb nav.
+$breadcrumb-color: $secondary-color
+$breadcrumb-crumb-color: $secondary-color
+$breadcrumb-font-size: 14px
 
 .breadcrumb
-  a
-    +font-size($breadcrumb-size)
+  padding: 0
+
+  ol
+    align-items: center
+    display: flex
+    flex-flow: row wrap
+
+  li
     color: $breadcrumb-color
-    text-transform: uppercase
+    font-size: get-rem($breadcrumb-font-size)
+
+    &:not(:first-child)
+      +icomoon-text($ico-chevron-right, 16px, $breadcrumb-crumb-color)
+
+  a
+    display: block

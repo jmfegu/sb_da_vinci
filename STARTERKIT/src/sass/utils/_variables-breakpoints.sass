@@ -1,12 +1,12 @@
 ////
-/// @group variables breakpoints
+/// @group Variables breakpoints
 ////
 
 /// > 360px.
-$x-small: 22.5rem
+$small: 22.5rem
 
 /// > 480px.
-$small: 30rem
+$x-small: 30rem
 
 /// > 768px.
 $medium: 48.5rem
@@ -28,41 +28,40 @@ $x-monster: 120rem
 
 // From 0 to breakpoint.
 
-/// @ignore Below_small.
-$below_small: $small - 00.01rem
+/// @ignore Below-small.
+$below-x-small: $x-small - 00.01rem
 
-/// @ignore Bellow_medium.
-$bellow_medium: $medium - 00.01rem
+/// @ignore Bellow-medium.
+$bellow-medium: $medium - 00.01rem
 
-/// @ignore Bellow_large.
-$bellow_large: $large - 00.01rem
+/// @ignore Bellow-large.
+$bellow-large: $large - 00.01rem
 
-/// @ignore Bellow_x_large.
-$bellow_x_large: $x-large - 00.01rem
+/// @ignore Bellow-x-large.
+$bellow-x-large: $x-large - 00.01rem
 
-/// @ignore Bellow_xx_large.
-$below_xx_large: $xx-large - 00.01rem
+/// @ignore Bellow-xx-large.
+$below-xx-large: $xx-large - 00.01rem
 
-/// @ignore Bellow_monster.
-$bellow_monster: $monster - 00.01rem
+/// @ignore Bellow-monster.
+$bellow-monster: $monster - 00.01rem
 
-/// @ignore Bellow_x_monster.
-$bellow_x_monster: $x-monster - 00.01rem
+/// @ignore Bellow-x-monster.
+$bellow-x-monster: $x-monster - 00.01rem
 
 // Between two breakboints.
 
-/// @ignore From x_small to bellow_small.
-$x_small_small: $x-small $below_small
+/// @ignore From x-small to bellow-small.
+$small-x-small: $small $below-x-small
 
-/// @ignore From small to bellow_medium.
-$small_medium: $small $bellow_medium
+/// @ignore From small to bellow-medium.
+$x-small-medium: $x-small $bellow-medium
 
-/// @ignore From medium to bellow_large.
-$medium_large: $medium $bellow_large
+/// @ignore From medium to bellow-large.
+$medium-large: $medium $bellow-large
 
 /// @ignore From large to bellow-monster.
-$large_monster: $large $bellow-monster
+$large-monster: $large $bellow-monster
 
-/// @ignore From monster to bellow_x_monster.
-$monster_x_monster: $monster $bellow_x_monster
-
+/// @ignore From monster to bellow-x-monster.
+$monster-x-monster: $monster $bellow-x-monster

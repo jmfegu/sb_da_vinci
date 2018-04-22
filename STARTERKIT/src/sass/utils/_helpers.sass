@@ -1,5 +1,5 @@
 ////
-/// Clases & placeholders.
+/// Classes & placeholders.
 /// @link http://thesassway.com/intermediate/understanding-placeholder-selectors
 /// @group helpers
 ////
@@ -8,56 +8,32 @@
 .simple-list
   margin: 0
   padding: 0
+
   li
     list-style-image: none
     list-style-type: none
 
 /// Add content in to grid.
 .restricted-container
-  +clearfix
-  +container(84.5vw)
+  margin: 0 auto
+  max-width: $container-width
 
 /// Hide element.
 .hide-element
   visibility: hidden
 
-/// Hide element 2.
-.hide-accesible
-  line-height: 0
-  font-size: 0
+/// Hide element .
+.hide-accessible
   color: transparent
-
-.visually-hidden
-  position: absolute !important
-  clip: rect(0.063rem, 0.063rem, 0.063rem, 0.063rem)
-  overflow: hidden
-  height: 0.063rem
-  width: 0.063rem
-  word-wrap: normal
-
-/// Class for animation.
-.animated
-  animation-duration: 1s
-  animation-fill-mode: both
-
-/// Add transition.
-.late
-  transition: 2s
+  font-size: 0
+  line-height: 0
 
 /// Visible from medium.
 .hide-rwd-mobile
-  display: none
-  +breakpoint($medium)
-    display: block
-
-/// Visible from medium-large.
-.hide-rwd-medium
-  display: none
-  +breakpoint($medium-large)
-    display: block
+  +breakpoint(0 $bellow-medium)
+    display: none
 
 /// Visible from large.
 .hide-rwd-large
-  display: none
-  +breakpoint($large)
-    display: block
+  +breakpoint(0 $bellow-large)
+    display: none

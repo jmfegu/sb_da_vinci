@@ -1,0 +1,242 @@
+// IAC
+form
+  // Inline elements
+  .form--inline
+    display: flex
+    flex-flow: row wrap
+
+    > *
+      flex-grow: 1
+
+    .form-item
+      float: none
+
+    .form-item,
+    .form-actions
+      margin: 1rem .5rem 1rem 0
+
+  // Captcha
+  .captcha
+    display: flex
+    justify-content: flex-end
+    width: 100%
+
+  // Action wrapper
+  .form-actions
+    align-items: center
+    display: flex
+    flex-flow: row wrap
+    justify-content: flex-end
+    margin: 1.5rem 0
+    width: 100%
+
+    > *
+      margin-bottom: .25rem
+      margin-left: .5rem !important
+      margin-right: 0 !important
+      margin-top: 0
+
+    .form-submit
+      order: 1
+
+  .form-item
+    margin: 1.5rem 0
+
+    .shs-container,
+    .shs-widget-container
+      width: 100%
+
+    .shs-field-container
+      display: flex
+      flex-flow: row nowrap
+
+      > *:not(:last-child)
+        margin-right: .5rem
+
+  // Label
+  .fieldset-legend,
+  label
+    color: $light-grey
+    display: block
+    font-family: $font-family-default
+    font-size: get-rem(14px)
+    font-weight: 500
+    line-height: 1.5
+    margin-bottom: 5px
+    text-transform: uppercase
+
+  .option
+    text-transform: none
+
+  fieldset
+    border-color: $border
+    padding: 1rem 1.5rem
+
+  input
+    &:placeholder
+      font-family: $font-family-default
+      font-size: get-rem(14px)
+
+    &[type='search']
+      box-sizing: border-box
+
+    &[type='button'],
+    &[type='submit'],
+    &[type='reset']
+      white-space: normal
+
+    &[type='checkbox'],
+    &[type='radio']
+      cursor: pointer
+
+    &[type='password'],
+    &[type='search'],
+    &[type='email'],
+    &[type='text'],
+    &[type='tel']
+      background-color: $white
+      border: 1px solid $border
+      font-size: get-rem(14px)
+      max-width: 100%
+      padding: .5rem
+      width: 100%
+
+      &:hover
+        border-color: $border
+
+  select,
+  textarea
+    background-color: $white
+    border: 1px solid $border
+    font-size: get-rem(14px)
+    max-width: 100%
+    min-height: get-rem(40px)
+    padding: .5rem
+    width: 100%
+
+    &:hover
+      border-color: $border
+
+  select
+    appearance: none
+    //background-image: url('../images/ico-arrow-down-blue.svg')
+    background-position: 98% center
+    background-repeat: no-repeat
+    background-size: 1rem
+    font-size: get-rem(14px)
+    padding-right: 2rem
+    width: 100%
+
+    &.focus-animation
+      animation: focus 1s ease-in-out
+
+    option
+      font-family: $font-family-default
+      font-size: get-rem(14px)
+
+// Description
+.description
+  margin: .25rem 0
+
+  p
+    margin: 0
+
+.description,
+.description p,
+.description strong
+  color: $grey
+  font-size: get-rem(14px)
+  font-style: italic
+  font-weight: normal
+
+.form-type
+  &-radio,
+  &-checkbox
+    .description
+      margin-left: 0
+
+    input
+      margin-right: 5px
+
+// Password strength
+.password-strength
+  font-size: .85rem
+  margin: .5rem 0
+
+// Machine name
+.field-suffix
+  margin-left: 5px
+
+  .link
+    color: $secondary-color
+    font-size: .65em
+    margin-left: get-rem(10px)
+    text-transform: uppercase
+
+// Check boxes & radios
+
+.form-checkboxes,
+.form-radios
+  .form-item
+    margin: 0 .5rem .5rem 0
+
+// DAVINCI
+//.old-form-styles
+  input:not(.form-checkbox):not(.form-radio):not(.form-file):not(.form-submit),
+  select,
+  textarea
+    +border(1, solid, $border)
+    +padding(8, 8, 8, 8)
+    +font-size(13)
+    background-color: $white
+    color: $blue
+    max-width: 100%
+    outline: none
+
+  input:not(.form-checkbox):not(.form-radio):not(.form-file):not(.form-submit),
+  select
+    +height(27)
+
+  input[type='search']
+    box-sizing: border-box
+
+  .fieldset-legend,
+  label:not(.option)
+    font-weight: 600
+    +margin-bottom(5)
+    +font-size(13)
+    text-transform: uppercase
+    display: block
+    color: $blue
+
+  .description
+    +margin-top(5)
+
+  .form-type
+    &-radio,
+    &-checkbox
+      +margin-left(0)
+      input
+        +margin-right(5)
+
+  .form-item,
+  .field--type-datetime
+    > label,
+    > .label
+      +font-size(13)
+      font-weight: bold
+      color: $blue
+      text-transform: uppercase
+
+  .password-strength
+    +margin(8, 0, 8, 0)
+    +font-size(13)
+
+  .field-suffix
+    +margin-left(5)
+    .link
+      +margin-left(10)
+      text-transform: uppercase
+      +font-size(10)
+      color: $secondary-color
+

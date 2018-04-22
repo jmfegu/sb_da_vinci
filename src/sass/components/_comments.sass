@@ -1,25 +1,34 @@
-////
-/// @group Comments
-/// @type color
-////
-
-/// @ignore Border color.
+// Comments.
 $comment-border-color: $border
 
 .comment
+  margin-top: 1rem
   overflow: hidden
-  +margin-top(16)
-  +padding-top(16)
+  padding-top: 1rem
+
   &:last-child
     border: 0
+
   &__meta
-    +margin-bottom(16)
+    margin-bottom: 1rem
     +breakpoint($medium)
-      +span(3 of 12 first)
+      float: left
+      margin-left: 0
+      margin-right: -100%
+      width: 23.72881%
+
   .content
-    +padding-bottom(16)
-    +border-bottom(1, solid, $comment-border-color)
+    border-bottom: 1px solid $comment-border-color
+    padding-bottom: 1rem
     +breakpoint($medium)
-      +span(9 of 12 last)
+      float: left
+      margin-left: 25.42373%
+      margin-right: -100%
+      width: 74.57627%
+
     > h3
-      +margin-bottom(0)
+      margin-bottom: 0
+
+
+
+

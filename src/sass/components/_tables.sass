@@ -1,31 +1,22 @@
-////
-/// @group Tables
-/// @type color
-////
-
-/// @ignore Background color.
-$table-bg-color  : transparent
-
-/// @ignore Color.
-$table-color     : $dark-blue
-
-/// @ignore Font size.
-$table-size      : 16
+// Tables.
+$table-bg-color: transparent
+$table-color: $dark-blue
+$table-size: 16
 
 table
-  border: none
+  border: 0
+
   th
     background-color: $table-bg-color
     color: $table-color
     font-weight: 700
+    padding: .75rem
     text-align: left
     vertical-align: top
-    +padding(10, 10, 10, 10)
-    +font-size($table-size)
-  td
-    +padding(10, 10, 10, 10)
 
-  // no margins for lists and paragraphs inside table cells.
+  td
+    padding: .5rem
+
   th,
   td
     p,

@@ -120,6 +120,7 @@ $max-breakpoint: 1440
 /// @param {number} $value - valor to conversion.
 /// @param {number} $rem-base - basis for the conversion.
 /// @return {number} number converted to vw.
+
 @function vw-calc($values, $base-value: $rem-base)
   @if type-of($values) != "number"
     @warn "values: #{$values} is not a number"
@@ -134,3 +135,15 @@ $max-breakpoint: 1440
   @for $i from 1 through $max
     $vwValues: append($vwValues, _convert-to-vw(nth($values, $i), $base-value))
   @return $vwValues
+
+/// Calculate rem value from px number.
+/// @param {number} $value - valor to conversion.
+/// @param {number} $rem-size - basis for the conversion.
+/// @return {number} number converted to rem.
+
+@function get-rem($value)
+  @if type-of($value) != 'number'
+    @warn 'values: #{$value} is not a number'
+    @return null
+  $rem-size: $value / 16px
+  @return #{$rem-size}rem
