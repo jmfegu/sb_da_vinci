@@ -1111,7 +1111,6 @@ samp {
   outline: none;
   padding: .75rem 1.5rem;
   text-align: center;
-  text-transform: uppercase;
   transition: all .5s;
 }
 
@@ -1428,20 +1427,15 @@ img {
 }
 
 table {
-  border: 0;
+  border-collapse: separate;
+  border-spacing: 0 .1875rem;
+  width: 100%;
 }
 
-table th {
-  background-color: transparent;
-  color: #081d30;
-  font-weight: 700;
-  padding: .75rem;
-  text-align: left;
-  vertical-align: top;
-}
-
+table th,
 table td {
-  padding: .5rem;
+  font-size: 0.875rem;
+  padding: 1rem;
 }
 
 table th p,
@@ -1452,8 +1446,28 @@ table td ul {
   padding: 0;
 }
 
+table th {
+  background-color: #e7e9eb;
+  color: #7e868d;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: .75rem 1rem;
+  text-align: left;
+  text-transform: uppercase;
+  vertical-align: top;
+}
+
+table tbody tr {
+  background-color: #e7e9eb;
+  box-shadow: inset 0 0 0 1px #e7e9eb;
+}
+
+table tbody tr:hover {
+  background-color: #e7e9eb;
+}
+
 nav.tabs .tabs:not(:last-child) {
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
 }
 
 nav.tabs .primary {
@@ -1604,6 +1618,10 @@ body {
   justify-content: center;
   line-height: 1;
   width: 2rem;
+}
+
+.block-local-tasks-block {
+  margin-bottom: 1rem;
 }
 
 .block-system-branding-block {
