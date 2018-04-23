@@ -1,27 +1,41 @@
 // Messages.
-$messages-background-color: $white
-$status-border-color: $green
 $status-color: $green
-$warning-border-color: $yellow
 $warning-color: $yellow
-$error-border-color: $light-red
-$error-color: $light-red
+$error-color: $red
 
 .messages
-  background-color: $messages-background-color
+  background-image: none
   border-radius: 0
-  border-width: 1px 1px 1px 5px
+  border-width: 0
   box-shadow: none
-  margin-top: 1rem
+  color: $white
+  padding: $container-padding
+
+  + .messages
+    margin: 0
+
+  > div
+    @extend .restricted-container
 
   &--status
-    border-color: $status-border-color
-    color: $status-color
+    background-color: $status-color
+
+    > div
+      +icomoon-text($ico-check, 24px, $white, 30px, top)
 
   &--warning
-    border-color: $warning-border-color
-    color: $warning-color
+    background-color: $warning-color
+
+    > div
+      +icomoon-text($ico-warning, 24px, $white, 30px, top)
 
   &--error
-    border-color: $error-border-color
-    color: $error-color
+    background-color: $error-color
+
+    > div
+      +icomoon-text($ico-stop, 24px, $white, 30px, top)
+
+  a
+    color: $white
+    font-weight: 700
+    text-decoration: underline

@@ -309,12 +309,12 @@
     line-height: 1
     width: get-rem($size)
 
-=icomoon-text($image, $font-size, $color, $pseudo: before, $position: center, $side: left, $size: $font-size, $bg-color: transparent, $br-radius: 0)
+=icomoon-text($image, $font-size, $color, $padding: $font-size, $position: center, $side: left, $size: $font-size, $bg-color: transparent, $br-radius: 0, $pseudo: before)
   position: relative
   @if $side == right
-    padding-right: #{$size}
+    padding-right: get-rem($padding)
   @else
-    padding-left: #{$size}
+    padding-left: get-rem($padding)
 
   &:#{$pseudo}
     align-items: center

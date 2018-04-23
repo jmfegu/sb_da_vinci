@@ -510,7 +510,7 @@
   list-style-type: none;
 }
 
-.restricted-container, .layout-container > .region, .layout-container > header .region-top-bar,
+.restricted-container, .layout-container > header .region-top-bar,
 .layout-container > header .site-header, .layout-container .site-breadcrumb .region-breadcrumb, .layout-container > main .layout-wrapper, .layout-container > footer .footer-wrapper {
   margin: 0 auto;
   max-width: 1440px;
@@ -695,10 +695,6 @@ body.frozen-body {
 
 .layout-container.sliding-panel-visible > header {
   background-color: #081d30;
-}
-
-.layout-container > .region {
-  width: 100%;
 }
 
 .layout-container > header {

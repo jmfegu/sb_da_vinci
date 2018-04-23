@@ -914,7 +914,7 @@ th {
   list-style-type: none;
 }
 
-.restricted-container, .layout-container > .region, .layout-container > header .region-top-bar,
+.restricted-container, .messages > div, .layout-container > header .region-top-bar,
 .layout-container > header .site-header, .layout-container .site-breadcrumb .region-breadcrumb, .layout-container > main .layout-wrapper, .layout-container > footer .footer-wrapper {
   margin: 0 auto;
   max-width: 1440px;
@@ -1072,7 +1072,7 @@ samp {
 
 .breadcrumb li:not(:first-child) {
   position: relative;
-  padding-left: 16px;
+  padding-left: 1rem;
 }
 
 .breadcrumb li:not(:first-child):before {
@@ -1080,7 +1080,7 @@ samp {
   background-color: transparent;
   border-radius: 0;
   color: #0a2239;
-  content: "";
+  content: "";
   display: flex;
   font-family: "Da-Vinci";
   font-size: 1rem;
@@ -1385,26 +1385,103 @@ img {
 }
 
 .messages {
-  background-color: white;
+  background-image: none;
   border-radius: 0;
-  border-width: 1px 1px 1px 5px;
+  border-width: 0;
   box-shadow: none;
-  margin-top: 1rem;
+  color: white;
+  padding: 1rem;
+}
+
+.messages + .messages {
+  margin: 0;
 }
 
 .messages--status {
-  border-color: #3b9376;
-  color: #3b9376;
+  background-color: #3b9376;
+}
+
+.messages--status > div {
+  position: relative;
+  padding-left: 1.875rem;
+}
+
+.messages--status > div:before {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 0;
+  color: white;
+  content: "";
+  display: flex;
+  font-family: "Da-Vinci";
+  font-size: 1.5rem;
+  height: 1.5rem;
+  justify-content: center;
+  line-height: 1;
+  position: absolute;
+  width: 1.5rem;
+  left: 0;
+  top: 0;
 }
 
 .messages--warning {
-  border-color: #fbdba7;
-  color: #fbdba7;
+  background-color: orange;
+}
+
+.messages--warning > div {
+  position: relative;
+  padding-left: 1.875rem;
+}
+
+.messages--warning > div:before {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 0;
+  color: white;
+  content: "";
+  display: flex;
+  font-family: "Da-Vinci";
+  font-size: 1.5rem;
+  height: 1.5rem;
+  justify-content: center;
+  line-height: 1;
+  position: absolute;
+  width: 1.5rem;
+  left: 0;
+  top: 0;
 }
 
 .messages--error {
-  border-color: #d64541;
-  color: #d64541;
+  background-color: #ef3340;
+}
+
+.messages--error > div {
+  position: relative;
+  padding-left: 1.875rem;
+}
+
+.messages--error > div:before {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 0;
+  color: white;
+  content: "";
+  display: flex;
+  font-family: "Da-Vinci";
+  font-size: 1.5rem;
+  height: 1.5rem;
+  justify-content: center;
+  line-height: 1;
+  position: absolute;
+  width: 1.5rem;
+  left: 0;
+  top: 0;
+}
+
+.messages a {
+  color: white;
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 .progress__track {
@@ -1567,7 +1644,7 @@ body {
   background-color: transparent;
   border-radius: 0;
   color: #0a2239;
-  content: "";
+  content: "";
   display: flex;
   font-family: "Da-Vinci";
   font-size: 1.5rem;
@@ -1604,7 +1681,7 @@ body {
   background-color: transparent;
   border-radius: 0;
   color: white;
-  content: "";
+  content: "";
   display: flex;
   font-family: "Da-Vinci";
   font-size: 1.5rem;
@@ -1691,10 +1768,6 @@ body.frozen-body {
 
 .layout-container.sliding-panel-visible > header {
   background-color: #081d30;
-}
-
-.layout-container > .region {
-  width: 100%;
 }
 
 .layout-container > header {
@@ -1811,7 +1884,7 @@ body.frozen-body {
   background-color: #ef3340;
   border-radius: 0;
   color: white;
-  content: "";
+  content: "";
   display: flex;
   font-family: "Da-Vinci";
   font-size: 1.5rem;
