@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,400i,700");
 @font-face {
-  font-family: 'Da-Vinci';
+  font-family: 'mytheme';
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/Da-Vinci.eot"), url("../fonts/Da-Vinci.eot") format("embedded-opentype"), url("../fonts/Da-Vinci.ttf") format("truetype"), url("../fonts/Da-Vinci.woff") format("woff"), url("../fonts/Da-Vinci.svg") format("svg");
+  src: url("../fonts/mytheme.eot"), url("../fonts/mytheme.eot") format("embedded-opentype"), url("../fonts/mytheme.ttf") format("truetype"), url("../fonts/mytheme.woff") format("woff"), url("../fonts/mytheme.svg") format("svg");
 }
 
 @keyframes pulse {
