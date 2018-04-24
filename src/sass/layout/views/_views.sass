@@ -1,23 +1,14 @@
-.views-element-container:not(.block-views)
-  .views-row,
-  ul:not(.links)
-    li
-      +border-bottom(1, solid, $light-color)
-      +margin-bottom(24)
-      +padding-bottom(8)
+// Views.
+.view
+  // Header
+  .view-header
+    margin-bottom: 2rem
 
-    li:last-child
-      border: 0
+  // Exposed filters
+  .view-filters
 
-  .views-field-title:not(th):not(td)
-    +font-size(24)
-    +margin-bottom(8)
-    color: $color
-    font-family: $font-family-title
-    font-weight: 600
-
-.views
-  &-view-grid
-    +padding-left(16)
-    +padding-right(16)
-
+    .views-exposed-form
+      background-color: $white
+      box-shadow: 0 5px 19px 0 $shadow
+      margin-bottom: 2rem
+      padding: .5rem 2rem
