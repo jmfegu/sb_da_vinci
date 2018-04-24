@@ -32,8 +32,8 @@ form
 
     > *
       margin-bottom: .25rem
-      margin-left: .5rem !important
-      margin-right: 0 !important
+      margin-left: .5rem
+      margin-right: 0
       margin-top: 0
 
     .form-submit
@@ -58,7 +58,6 @@ form
   label
     color: $light-grey
     display: block
-    font-family: $font-family-default
     font-size: get-rem(14px)
     font-weight: 500
     line-height: 1.5
@@ -74,7 +73,6 @@ form
 
   input
     &:placeholder
-      font-family: $font-family-default
       font-size: get-rem(14px)
 
     &[type='search']
@@ -131,23 +129,21 @@ form
       animation: focus 1s ease-in-out
 
     option
-      font-family: $font-family-default
       font-size: get-rem(14px)
 
 // Description
 .description
-  margin: .25rem 0
-
-  p
-    margin: 0
-
-.description,
-.description p,
-.description strong
   color: $grey
   font-size: get-rem(14px)
   font-style: italic
   font-weight: normal
+  margin: .25rem 0
+
+  *
+    font-size: inherit
+    font-style: inherit
+    font-weight: inherit
+    margin: 0
 
 .form-type
   &-radio,
