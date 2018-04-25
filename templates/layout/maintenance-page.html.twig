@@ -11,65 +11,57 @@
 #}
 <div class="layout-container">
 
-  <header role="banner">
-    {% if page.top_bar %}
-      <div class="top-bar">
-        {{ page.top_bar }}
-      </div>
-    {% endif %}
-    <div class="site-header">
-      <div class="region-header">
-        {% if logo %}
-          <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home" class="site-logo">
-            <img src="{{ logo }}" alt="{{ 'Home'|t }}"/>
-          </a>
-        {% endif %}
+  <header aria-label="{{ 'Site header'|t}}">
+    <div class="wrapper-header">
+      <div class="site-header">
+        <div class="region-header">
+          <div class="block-system-branding-block">
 
-        {% if site_name or site_slogan %}
-          <div class="name-and-slogan">
-            {% if site_name %}
-             <div class="site-name">
-               <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
-             </div>
+            {% if logo %}
+              <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home" class="site-logo">
+                <img src="{{ logo }}" alt="{{ 'Home'|t }}"/>
+              </a>
             {% endif %}
 
-            {% if site_slogan %}
-              <div class="site-slogan">{{ site_slogan }}</div>
+            {% if site_name or site_slogan %}
+              <div class="name-and-slogan">
+                {% if site_name %}
+                <div class="site-name">
+                  <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+                </div>
+                {% endif %}
+
+                {% if site_slogan %}
+                  <div class="site-slogan">{{ site_slogan }}</div>
+                {% endif %}
+              </div>{# /.name-and-slogan #}
             {% endif %}
-          </div>{# /.name-and-slogan #}
-        {% endif %}
+
+          </div>
+        </div>
       </div>
     </div>
-
   </header>
 
   <main>
-    {% if title %}
-      <h1>{{ title }}</h1>
-    {% endif %}
-
-    {{ page.highlighted }}
-
-    {{ page.content }}
+    <div class="layout-wrapper">
+      <div class="layout-content">
+      {% if title %}
+        <h1>{{ title }}</h1>
+      {% endif %}
+        {{ page.content }}
+      </div>{# /.layout-content #}
+    </div>
   </main>
 
-  {% if page.sidebar_first %}
-    <aside class="layout-sidebar-first" role="complementary">
-      {{ page.sidebar_first }}
-    </aside>{# /.layout-sidebar-first #}
-  {% endif %}
+  <footer class="site-footer" role="complementary">
 
-  {% if page.sidebar_second %}
-    <aside class="layout-sidebar-second" role="complementary">
-      {{ page.sidebar_second }}
-    </aside>{# /.layout-sidebar-second #}
-  {% endif %}
+    <div class="footer-wrapper">
+      {{ page.footer_info }}
+    </div>
 
-  {% if page.footer %}
-    <footer class="site-footer" role="complementary">
-      {{ page.footer }}
-    </footer>
-  {% endif %}
+  </footer>
+
 
 
 </div>{# /.layout-container #}

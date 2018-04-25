@@ -1826,17 +1826,6 @@ body.frozen-body {
   overflow: hidden;
 }
 
-.maintenance-page h1 {
-  margin-bottom: 1vmin;
-  text-align: center;
-}
-
-@media (min-width: 48.5rem) {
-  .maintenance-page h1 {
-    margin-bottom: 0.55555vw;
-  }
-}
-
 @media (min-width: 0) and (max-width: 48.5rem) {
   .toolbar-fixed.toolbar-horizontal .layout-container > header {
     top: 7.5vmin;
@@ -1856,6 +1845,7 @@ body.frozen-body {
 .layout-container {
   display: flex;
   flex-direction: column;
+  margin: 0;
   min-height: 100vh;
 }
 
@@ -2076,34 +2066,16 @@ body.frozen-body {
 }
 
 .node .field--type-text-long {
-  font-size: 2vmin;
-}
-
-@media (min-width: 48.5rem) {
-  .node .field--type-text-long {
-    font-size: 1.1111vw;
-  }
+  font-size: 1rem;
 }
 
 .node .field--type-text-long ul {
-  padding-left: 2vmin;
+  padding-left: 1rem;
 }
 
-@media (min-width: 48.5rem) {
-  .node .field--type-text-long ul {
-    padding-left: 1.1111vw;
-  }
-}
-
-.node .field--type-text-long ul li {
+.node .field--type-text-long li {
   line-height: 1.5;
-  margin-bottom: 2vmin;
-}
-
-@media (min-width: 48.5rem) {
-  .node .field--type-text-long ul li {
-    margin-bottom: 1.1111vw;
-  }
+  margin-bottom: 1rem;
 }
 
 .site-breadcrumb {
