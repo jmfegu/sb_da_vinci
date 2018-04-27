@@ -14,7 +14,6 @@ global-js:
     js/custom.js: {}
     js/svg.js: {}
     js/search.js: {}
-    js/rwd.js: {}
   dependencies:
     - core/jquery
     - core/modernizr

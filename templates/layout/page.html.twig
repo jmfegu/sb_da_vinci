@@ -74,9 +74,9 @@
   </header>
 
   {% if page.sliding_menu %}
-    <nav class="js-menu sliding-panel-content">
-      {{ page.sliding_menu }}
-    </nav>
+  <aside class="js-menu sliding-panel-content">
+    {{ page.sliding_menu }}
+  </aside>
   {% endif %}
 
   {% if page.highlighted %}
@@ -124,12 +124,6 @@
 
     </div>
   </main>
-
-  {% if page.sliding_menu %}
-    <aside id="sliding-panel" class="js-menu sliding-panel-content">
-      {{ page.sliding_menu }}
-    </aside>
-  {% endif %}
 
   {% if page.content_bottom %}
     {{ page.content_bottom }}

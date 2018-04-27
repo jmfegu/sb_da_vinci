@@ -1,15 +1,10 @@
-// TODO:
-// -Intentar quitar los important si fuese posible.
-// FIXME:
-// - Quitar ids.
-
+// Header.
 $header-background-color: $secondary-color
 
-// Header.
 .layout-container
 
   > header
-    z-index: 2
+    z-index: 10
 
     .wrapper-header
       background-color: $header-background-color
@@ -38,37 +33,6 @@ $header-background-color: $secondary-color
       .block-system-branding-block
         margin-right: auto
 
-    .menu-slide-action
-      +width(50)
-      +height(50)
-      cursor: pointer
-      position: relative
-      z-index: 8
-      +breakpoint($medium)
-        display: none
-      +breakpoint($monster)
-        margin: vw-calc(10) 0
-
-      #menu-svg
-        height: vw-calc(32)
-        position: absolute
-        width: vw-calc(32)
-
-      svg
-        height: vmin-calc(50) !important
-        position: absolute
-        top: 0
-        width: vmin-calc(50) !important
-        +breakpoint($monster)
-          height: vw-calc(44) !important
-          top: vw-calc(-9)
-          width: vw-calc(44) !important
-
-        path,
-        a,
-        g
-          fill: $main-color
-          transition: fill 2s ease
-
-
-
+      .menu--main
+        +breakpoint(0 $bellow-large)
+          display: none

@@ -18,10 +18,6 @@
   }
 }
 
-.pulse {
-  animation-name: pulse;
-}
-
 @keyframes typing {
   from {
     width: 0;
@@ -31,21 +27,14 @@
   }
 }
 
-.typing {
-  animation-name: typing;
-}
-
 @keyframes blink-caret {
-  from, to {
+  from,
+  to {
     border-color: transparent;
   }
   50% {
     border-color: #f1f3f1;
   }
-}
-
-.blink-caret {
-  animation-name: blink-caret;
 }
 
 @keyframes fadeIn {
@@ -57,10 +46,6 @@
   }
 }
 
-.fadeIn {
-  animation-name: fadeIn;
-}
-
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -68,10 +53,6 @@
   100% {
     opacity: 0;
   }
-}
-
-.fadeOut {
-  animation-name: fadeOut;
 }
 
 @keyframes fadeInUp {
@@ -85,10 +66,6 @@
   }
 }
 
-.fadeInUp {
-  animation-name: fadeInUp;
-}
-
 @keyframes fadeInDown {
   0% {
     opacity: 0;
@@ -98,10 +75,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.fadeInDown {
-  animation-name: fadeInDown;
 }
 
 @keyframes fadeInLeft {
@@ -115,10 +88,6 @@
   }
 }
 
-.fadeInLeft {
-  animation-name: fadeInLeft;
-}
-
 @keyframes fadeInRight {
   0% {
     opacity: 0;
@@ -128,10 +97,6 @@
     opacity: 1;
     transform: translateX(0);
   }
-}
-
-.fadeInRight {
-  animation-name: fadeInRight;
 }
 
 @keyframes fadeInUpBig {
@@ -145,10 +110,6 @@
   }
 }
 
-.fadeInUpBig {
-  animation-name: fadeInUpBig;
-}
-
 @keyframes fadeInDownBig {
   0% {
     opacity: 0;
@@ -158,10 +119,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.fadeInDownBig {
-  animation-name: fadeInDownBig;
 }
 
 @keyframes fadeInLeftBig {
@@ -175,10 +132,6 @@
   }
 }
 
-.fadeInLeftBig {
-  animation-name: fadeInLeftBig;
-}
-
 @keyframes fadeInRightBig {
   0% {
     opacity: 0;
@@ -188,10 +141,6 @@
     opacity: 1;
     transform: translateX(0);
   }
-}
-
-.fadeInRightBig {
-  animation-name: fadeInRightBig;
 }
 
 @keyframes fadeOut {
@@ -212,14 +161,6 @@
     opacity: 0;
     transform: translateY(20px);
   }
-}
-
-.fadeOutDown {
-  animation-name: fadeOutDown;
-}
-
-.fadeOutUp {
-  animation-name: fadeOutUp;
 }
 
 @keyframes fadeOutDown {
@@ -244,10 +185,6 @@
   }
 }
 
-.fadeOutLeft {
-  animation-name: fadeOutLeft;
-}
-
 @keyframes fadeOutRight {
   0% {
     opacity: 1;
@@ -257,10 +194,6 @@
     opacity: 0;
     transform: translateX(20px);
   }
-}
-
-.fadeOutRight {
-  animation-name: fadeOutRight;
 }
 
 @keyframes fadeOutUpBig {
@@ -274,10 +207,6 @@
   }
 }
 
-.fadeOutUpBig {
-  animation-name: fadeOutUpBig;
-}
-
 @keyframes fadeOutDownBig {
   0% {
     opacity: 1;
@@ -287,10 +216,6 @@
     opacity: 0;
     transform: translateY(2000px);
   }
-}
-
-.fadeOutDownBig {
-  animation-name: fadeOutDownBig;
 }
 
 @keyframes fadeOutLeftBig {
@@ -304,10 +229,6 @@
   }
 }
 
-.fadeOutLeftBig {
-  animation-name: fadeOutLeftBig;
-}
-
 @keyframes fadeOutRightBig {
   0% {
     opacity: 1;
@@ -319,86 +240,77 @@
   }
 }
 
-.fadeOutRightBig {
-  animation-name: fadeOutRightBig;
-}
-
 @keyframes moveOnLeftOdd {
   0% {
-    transform: translate(0px);
-    transform-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    transform: translate(0);
   }
   100% {
-    transform: translate(-42.70791vw);
-    transform-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    transform: translate(vw-calc(-615));
   }
 }
 
 @keyframes moveOnRightOdd {
   0% {
+    animation-timing-function: ease-in-out;
     transform: translate(0px);
-    transform-animation-timing-function: ease-in-out;
   }
   100% {
-    transform: translate(38.8885vw);
-    transform-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    transform: translate(vw-calc(560));
   }
 }
 
 @keyframes moveOnLeftEven {
   0% {
+    animation-timing-function: ease-in-out;
     transform: translate(0px);
-    transform-animation-timing-function: ease-in-out;
   }
   100% {
-    transform: translate(-38.8885vw);
-    transform-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    transform: translate(vw-calc(-560));
   }
 }
 
 @keyframes moveOnRightEven {
   0% {
+    animation-timing-function: ease-in-out;
     transform: translate(0px);
-    transform-animation-timing-function: ease-in-out;
   }
   100% {
-    transform: translate(42.70791vw);
-    transform-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    transform: translate(vw-calc(615));
   }
 }
 
 @keyframes flip {
   0% {
-    transform: perspective(400px) rotateY(0);
     animation-timing-function: ease-out;
+    transform: perspective(400px) rotateY(0);
   }
   40% {
-    transform: perspective(400px) translateZ(150px) rotateY(170deg);
     animation-timing-function: ease-out;
+    transform: perspective(400px) translateZ(150px) rotateY(170deg);
   }
   50% {
-    transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
     animation-timing-function: ease-in;
+    transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
   }
   80% {
-    transform: perspective(400px) rotateY(360deg) scale(0.95);
     animation-timing-function: ease-in;
+    transform: perspective(400px) rotateY(360deg) scale(0.95);
   }
   100% {
-    transform: perspective(400px) scale(1);
     animation-timing-function: ease-in;
+    transform: perspective(400px) scale(1);
   }
-}
-
-.flip {
-  backface-visibility: visible !important;
-  animation-name: flip;
 }
 
 @keyframes flipInX {
   0% {
-    transform: perspective(400px) rotateX(90deg);
     opacity: 0;
+    transform: perspective(400px) rotateX(90deg);
   }
   40% {
     transform: perspective(400px) rotateX(-10deg);
@@ -407,36 +319,26 @@
     transform: perspective(400px) rotateX(10deg);
   }
   100% {
-    transform: perspective(400px) rotateX(0deg);
     opacity: 1;
+    transform: perspective(400px) rotateX(0deg);
   }
-}
-
-.flipInX {
-  backface-visibility: visible !important;
-  animation-name: flipInX;
 }
 
 @keyframes flipOutX {
   0% {
-    transform: perspective(400px) rotateX(0deg);
     opacity: 1;
+    transform: perspective(400px) rotateX(0deg);
   }
   100% {
-    transform: perspective(400px) rotateX(90deg);
     opacity: 0;
+    transform: perspective(400px) rotateX(90deg);
   }
-}
-
-.flipOutX {
-  animation-name: flipOutX;
-  backface-visibility: visible !important;
 }
 
 @keyframes flipInY {
   0% {
-    transform: perspective(400px) rotateY(90deg);
     opacity: 0;
+    transform: perspective(400px) rotateY(90deg);
   }
   40% {
     transform: perspective(400px) rotateY(-10deg);
@@ -445,34 +347,28 @@
     transform: perspective(400px) rotateY(10deg);
   }
   100% {
-    transform: perspective(400px) rotateY(0deg);
     opacity: 1;
+    transform: perspective(400px) rotateY(0deg);
   }
-}
-
-.flipInY {
-  backface-visibility: visible !important;
-  animation-name: flipInY;
 }
 
 @keyframes flipOutY {
   0% {
-    transform: perspective(400px) rotateY(0deg);
     opacity: 1;
+    transform: perspective(400px) rotateY(0deg);
   }
   100% {
-    transform: perspective(400px) rotateY(90deg);
     opacity: 0;
+    transform: perspective(400px) rotateY(90deg);
   }
-}
-
-.flipOutY {
-  backface-visibility: visible !important;
-  animation-name: flipOutY;
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
   40% {
@@ -483,21 +379,13 @@
   }
 }
 
-.bounce {
-  animation-name: bounce;
-}
-
 @keyframes border-dance {
   0% {
-    background-position: 0px 0px, 300px 116px, 0px 150px, 216px 0px;
+    background-position: 0 0, 300px 116px, 0 150px, 216px 0;
   }
   100% {
-    background-position: 300px 0px, 0px 116px, 0px 0px, 216px 150px;
+    background-position: 300px 0, 0 116px, 0 0, 216px 150px;
   }
-}
-
-.border-dance {
-  animation-name: border-dance;
 }
 
 .simple-list {
@@ -510,8 +398,7 @@
   list-style-type: none;
 }
 
-.restricted-container, .layout-container > header .region-top-bar,
-.layout-container > header .site-header, .layout-container .site-breadcrumb .region-breadcrumb, .layout-container > main .layout-wrapper, .layout-container > footer .footer-wrapper {
+.restricted-container {
   margin: 0 auto;
   max-width: 1440px;
 }
@@ -538,133 +425,121 @@
   }
 }
 
-html,
-body {
-  min-height: 100vh;
+.pulse {
+  animation-name: pulse;
 }
 
-body.frozen-body {
-  overflow: hidden;
+.typing {
+  animation-name: typing;
 }
 
-@media (min-width: 0) and (max-width: 48.5rem) {
-  .toolbar-fixed.toolbar-horizontal .layout-container > header {
-    top: 7.5vmin;
-  }
+.blink-caret {
+  animation-name: blink-caret;
 }
 
-.has-secondary-menu .layout-container {
-  padding-top: 9.72213vw;
+.fade-in {
+  animation-name: fadeIn;
 }
 
-@media (min-width: 0) and (max-width: 48.5rem) {
-  .has-secondary-menu .layout-container {
-    padding-top: 12vmin;
-  }
+.fade-out {
+  animation-name: fadeOut;
 }
 
-.layout-container {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  min-height: 100vh;
+.fade-in-up {
+  animation-name: fadeInUp;
 }
 
-.layout-container.sliding-panel-visible > header {
-  background-color: #081d30;
+.fade-in-down {
+  animation-name: fadeInDown;
 }
 
-.layout-container > header {
-  width: 100%;
+.fade-in-left {
+  animation-name: fadeInLeft;
 }
 
-.layout-container > header .top-bar {
-  padding: 0.5rem 1rem;
+.fade-in-right {
+  animation-name: fadeInRight;
 }
 
-.layout-container > header .wrapper-header {
-  padding: 1rem;
+.fade-in-up-big {
+  animation-name: fadeInUpBig;
 }
 
-.layout-container .site-breadcrumb {
-  padding: 1.5rem 1rem;
+.fade-in-down-big {
+  animation-name: fadeInDownBig;
 }
 
-.layout-container > main {
-  flex-grow: 1;
-  padding: 1rem;
-  width: 100%;
+.fade-in-left-big {
+  animation-name: fadeInLeftBig;
 }
 
-.layout-container > main .layout-wrapper {
-  display: flex;
-  flex-direction: column;
+.fade-in-right-big {
+  animation-name: fadeInRightBig;
 }
 
-@media (min-width: 48.5rem) {
-  .layout-container > main .layout-wrapper {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+.fade-out-down {
+  animation-name: fadeOutDown;
 }
 
-@media (min-width: 0) and (max-width: 48.5rem) {
-  .layout-container > main .layout-wrapper > *:not(:last-child) {
-    margin-bottom: 2vmin;
-  }
+.fade-out-up {
+  animation-name: fadeOutUp;
 }
 
-@media (min-width: 0) and (max-width: 48.5rem) and (min-width: 48.5rem) {
-  .layout-container > main .layout-wrapper > *:not(:last-child) {
-    margin-bottom: 1.1111vw;
-  }
+.fade-out-left {
+  animation-name: fadeOutLeft;
 }
 
-.layout-container > main .layout-wrapper .layout-content {
-  width: 100%;
+.fade-out-right {
+  animation-name: fadeOutRight;
 }
 
-@media (min-width: 48.5rem) {
-  .layout-container > main .layout-wrapper .layout-content {
-    flex-grow: 1;
-    width: 50%;
-  }
+.fade-out-up-big {
+  animation-name: fadeOutUpBig;
 }
 
-.layout-container > main .layout-wrapper aside {
-  width: 100%;
+.fade-out-down-big {
+  animation-name: fadeOutDownBig;
 }
 
-@media (min-width: 48.5rem) {
-  .layout-container > main .layout-wrapper aside {
-    width: 23.5%;
-  }
+.fade-out-left-big {
+  animation-name: fadeOutLeftBig;
 }
 
-@media (min-width: 48.5rem) {
-  .layout-container > main .layout-wrapper aside.layout-sidebar-first {
-    margin-right: 1.5%;
-    order: -1;
-  }
+.fade-out-right-big {
+  animation-name: fadeOutRightBig;
 }
 
-@media (min-width: 48.5rem) {
-  .layout-container > main .layout-wrapper aside.layout-sidebar-second {
-    margin-left: 1.5%;
-  }
+.flip {
+  animation-name: flip;
+  backface-visibility: visible !important;
 }
 
-.layout-container > footer {
-  padding: 2rem 1rem;
+.flip-in-x {
+  animation-name: flipInX;
+  backface-visibility: visible !important;
 }
 
-.ie .layout-container {
-  display: block;
+.flip-out-x {
+  animation-name: flipOutX;
+  backface-visibility: visible !important;
 }
 
-.border-region .region,
-.border-region main {
-  outline: 0.125rem #081d30 solid;
+.flip-in-y {
+  animation-name: flipInY;
+  backface-visibility: visible !important;
+}
+
+.flip-out-y {
+  animation-name: flipOutY;
+  backface-visibility: visible !important;
+}
+
+.bounce {
+  animation-name: bounce;
+}
+
+.border-dance {
+  animation-name: border-dance;
 }
 
 /*# sourceMappingURL=maps/mytheme.css.map */

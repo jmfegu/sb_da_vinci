@@ -6,7 +6,7 @@
 (function ($) {
   Drupal.behaviors.davinciTheme = {
     attach: function (context) {
-      
+
       // Convert Logo.png to svg with posibility change color.
 			$('.site-logo img').each(function(){
 
@@ -50,7 +50,7 @@
 				}, 'xml');
 
 			});
-      
+
     }
   };
 })(jQuery);

@@ -4,9 +4,10 @@
 
   function check_if_in_view() {
 
-    // Usage.
+    /** Usage.
     $('.example:in-viewport').addClass('in-view');
     $('.example:below-the-fold').removeClass('in-view');
+    */
 
   }
 

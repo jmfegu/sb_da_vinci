@@ -1,3 +1,4 @@
+// TODO: Aplicar grid layout a la estructuracion del contenido y sidebars.
 html,
 body
   min-height: 100vh
@@ -6,28 +7,11 @@ body
   &.frozen-body
     overflow: hidden
 
-.toolbar-fixed.toolbar-horizontal
-  .layout-container
-    & > header
-      +breakpoint(0 $medium)
-        top: vmin-calc(60)
-
-.has-secondary-menu
-  .layout-container
-    // Leave space for the fixed menu.
-    padding-top: vw-calc(140)
-    +breakpoint(0 $medium)
-      padding-top: vmin-calc(96)
-
 .layout-container
   display: flex
   flex-direction: column
   margin: 0
   min-height: 100vh
-
-  &.sliding-panel-visible
-    > header
-      background-color: $dark-blue
 
   // Header.
   > header
@@ -60,32 +44,32 @@ body
       @extend .restricted-container
       display: flex
       flex-direction: column
-      +breakpoint($medium)
+      +breakpoint($large)
         flex-direction: row
         flex-wrap: wrap
 
       > *:not(:last-child)
-        +breakpoint(0 $medium)
-          +margin-bottom(16)
+        +breakpoint(0 $bellow-large)
+          margin-bottom: 1rem
 
       .layout-content
         width: 100%
-        +breakpoint($medium)
+        +breakpoint($large)
           flex-grow: 1
           width: 50%
 
       aside
         width: 100%
-        +breakpoint($medium)
+        +breakpoint($large)
           width: 23.5%
 
         &.layout-sidebar-first
-          +breakpoint($medium)
+          +breakpoint($large)
             margin-right: 1.5%
             order: -1
 
         &.layout-sidebar-second
-          +breakpoint($medium)
+          +breakpoint($large)
             margin-left: 1.5%
 
   // Footer.
