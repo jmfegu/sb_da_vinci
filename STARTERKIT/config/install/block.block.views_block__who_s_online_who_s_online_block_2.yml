@@ -1,4 +1,4 @@
-uuid: 5fce0c8f-5cd6-4113-aa43-63a43e44fbe9
+uuid: 9b48b0cb-64be-4ad2-86c4-32961f317e46
 langcode: en
 status: true
 dependencies:
@@ -9,6 +9,8 @@ dependencies:
     - views
   theme:
     - mytheme
+_core:
+  default_config_hash: xBiFtSOkScv98bcoChsACj-EOaLB26p5R62FD2m6gTI
 id: views_block__who_s_online_who_s_online_block_2
 theme: mytheme
 region: sidebar_first

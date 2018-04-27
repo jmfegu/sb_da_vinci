@@ -1,4 +1,4 @@
-uuid: a38d627a-b435-4a78-9bc3-b5cf7b25b725
+uuid: 08c2dae6-b03c-4e35-bd50-5f3d76e69bc6
 langcode: en
 status: true
 dependencies:
@@ -7,7 +7,7 @@ dependencies:
   theme:
     - mytheme
 _core:
-  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+  default_config_hash: ssp3U8nm95FKwcIvco88LOTEPH7vIYrEDqHY6c-w3Lk
 id: mytheme_messages
 theme: mytheme
 region: highlighted

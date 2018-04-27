@@ -1,4 +1,4 @@
-uuid: ad7059e6-26af-4517-a002-e4b65d891cc0
+uuid: 986df2b6-602c-4205-b880-87680c94e106
 langcode: en
 status: true
 dependencies:
@@ -7,7 +7,7 @@ dependencies:
   theme:
     - mytheme
 _core:
-  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+  default_config_hash: 1bvBQLr6HSfz8BJwUOvLJo8Fw8Y6vTEKA6Cp62j1-m8
 id: mytheme_content
 theme: mytheme
 region: content

@@ -1,4 +1,4 @@
-uuid: 7cd426c6-6462-411c-9b37-89eb94006055
+uuid: c45ddb6f-1765-46d7-b0f0-09e457bacb8f
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   theme:
     - mytheme
 _core:
-  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+  default_config_hash: W_MQzBxQJ1Qxgq4qVEDDodOeqGkEbq9nCyjwJPGAzwU
 id: mytheme_breadcrumbs
 theme: mytheme
 region: breadcrumb
-weight: 0
+weight: -7
 provider: null
 plugin: system_breadcrumb_block
 settings:

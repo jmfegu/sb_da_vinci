@@ -1,4 +1,4 @@
-uuid: 7da94f27-904b-43c7-b92d-f0eacd57f5fd
+uuid: c329fe4b-fb90-4e9e-ab32-576e7a896388
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,9 @@ dependencies:
     - user
   theme:
     - mytheme
-id: userlogin_2
+_core:
+  default_config_hash: KVwc-WSndvD_Y3bzIoZ6srKQsDcqhJ4tcpSmFAd_C-I
+id: mytheme_userlogin
 theme: mytheme
 region: sidebar_first
 weight: 0

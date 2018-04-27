@@ -1,4 +1,4 @@
-uuid: 3883b2f0-f43e-4496-ac9b-d299e49b864e
+uuid: 280b3869-3f9e-49f1-8336-31c1183ca8e0
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   theme:
     - mytheme
 _core:
-  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+  default_config_hash: JnwTr87kloIw9cQKhapZE0hhjzDCOr0qtSl2C9Ziaig
 id: mytheme_powered
 theme: mytheme
-region: footer
-weight: -6
+region: footer_info
+weight: -7
 provider: null
 plugin: system_powered_by_block
 settings:

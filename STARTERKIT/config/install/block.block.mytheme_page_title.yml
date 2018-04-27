@@ -1,15 +1,15 @@
-uuid: 133cc0b6-7513-4989-bfe2-052ca60947d3
+uuid: 69ccb9de-6ae7-498a-8f11-5b4ec8bcfe16
 langcode: en
 status: true
 dependencies:
   theme:
     - mytheme
 _core:
-  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+  default_config_hash: MuufNxAiVpV48K31biKzdkYw5GXyRXO9LgZ2tRUsyBo
 id: mytheme_page_title
 theme: mytheme
-region: content
-weight: -7
+region: breadcrumb
+weight: -6
 provider: null
 plugin: page_title_block
 settings:
