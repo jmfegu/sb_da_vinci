@@ -9,6 +9,8 @@ dependencies:
     - user
   theme:
     - da_vinci
+_core:
+  default_config_hash: aZybgbQpAe9htsM--35J2v4rpUE6qFnFk9RfjhLgy-k
 id: useraccountmenu
 theme: da_vinci
 region: secondary_menu

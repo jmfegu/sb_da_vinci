@@ -5,10 +5,10 @@ dependencies:
   theme:
     - da_vinci
 _core:
-  default_config_hash: nSHUhzZMSt_kYf4yqA6_2EXR6DC6Zfsn5rI_GGQvVLU
+  default_config_hash: MuufNxAiVpV48K31biKzdkYw5GXyRXO9LgZ2tRUsyBo
 id: da_vinci_page_title
 theme: da_vinci
-region: content
+region: breadcrumb
 weight: -6
 provider: null
 plugin: page_title_block

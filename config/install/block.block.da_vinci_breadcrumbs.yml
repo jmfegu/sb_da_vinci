@@ -7,11 +7,11 @@ dependencies:
   theme:
     - da_vinci
 _core:
-  default_config_hash: ujLcfMv4CsmdZgTxawCwoJooxAdwes3B798zFuM5Aik
+  default_config_hash: W_MQzBxQJ1Qxgq4qVEDDodOeqGkEbq9nCyjwJPGAzwU
 id: da_vinci_breadcrumbs
 theme: da_vinci
 region: breadcrumb
-weight: 0
+weight: -7
 provider: null
 plugin: system_breadcrumb_block
 settings:

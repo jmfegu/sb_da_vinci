@@ -7,11 +7,11 @@ dependencies:
   theme:
     - da_vinci
 _core:
-  default_config_hash: pIKRIRPNV43HFxKKhD-f-96wK787q4RhyQzDhPgq4Ws
+  default_config_hash: JnwTr87kloIw9cQKhapZE0hhjzDCOr0qtSl2C9Ziaig
 id: da_vinci_powered
 theme: da_vinci
-region: footer
-weight: -6
+region: footer_info
+weight: -7
 provider: null
 plugin: system_powered_by_block
 settings:

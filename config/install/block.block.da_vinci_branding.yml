@@ -7,11 +7,11 @@ dependencies:
   theme:
     - da_vinci
 _core:
-  default_config_hash: oLDzpW7_D6qnyUR9hWI9du50aZa6HIZaQuxC8eIKDXA
+  default_config_hash: RhSxk4BMoefkTbhN694aeHQJcU2w7_HXKbQdDNCPqTs
 id: da_vinci_branding
 theme: da_vinci
 region: header
-weight: -5
+weight: -7
 provider: null
 plugin: system_branding_block
 settings:

@@ -9,11 +9,11 @@ dependencies:
   theme:
     - da_vinci
 _core:
-  default_config_hash: wZBdxqn8PjAUDYI6cz-DC_r-w1pMvNbns85Xx9VcLNA
+  default_config_hash: 1_pRWYAn2jB0frb286PE1Zj-2KjrTBg3w0PKFeGvEgA
 id: da_vinci_footer
 theme: da_vinci
-region: footer_info
-weight: -6
+region: footer
+weight: -8
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

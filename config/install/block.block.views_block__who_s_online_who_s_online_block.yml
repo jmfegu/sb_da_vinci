@@ -9,6 +9,8 @@ dependencies:
     - views
   theme:
     - da_vinci
+_core:
+  default_config_hash: xBiFtSOkScv98bcoChsACj-EOaLB26p5R62FD2m6gTI
 id: views_block__who_s_online_who_s_online_block
 theme: da_vinci
 region: sidebar_first

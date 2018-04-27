@@ -5,7 +5,7 @@ dependencies:
   theme:
     - da_vinci
 _core:
-  default_config_hash: J1P5O6ohdhSXmk9ZfUK2RxzIcN79fjkLqEbOxOnnC5k
+  default_config_hash: 7Z3oZncLDFf7j1FKhQ4gjcwlSrv8ePU2hYkLYDQ1jCY
 id: da_vinci_local_actions
 theme: da_vinci
 region: content

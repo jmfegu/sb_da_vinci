@@ -6,6 +6,8 @@ dependencies:
     - user
   theme:
     - da_vinci
+_core:
+  default_config_hash: KVwc-WSndvD_Y3bzIoZ6srKQsDcqhJ4tcpSmFAd_C-I
 id: userlogin
 theme: da_vinci
 region: sidebar_first

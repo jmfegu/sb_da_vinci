@@ -7,7 +7,7 @@ dependencies:
   theme:
     - da_vinci
 _core:
-  default_config_hash: 2JZ9iWc3Kc_RtTZ2ww99gVUmG8O4WLYbIFqi6bZ766U
+  default_config_hash: ssp3U8nm95FKwcIvco88LOTEPH7vIYrEDqHY6c-w3Lk
 id: da_vinci_messages
 theme: da_vinci
 region: highlighted
