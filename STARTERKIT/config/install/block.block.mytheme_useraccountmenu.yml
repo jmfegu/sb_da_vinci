@@ -11,7 +11,7 @@ dependencies:
     - mytheme
 _core:
   default_config_hash: aZybgbQpAe9htsM--35J2v4rpUE6qFnFk9RfjhLgy-k
-id: useraccountmenu
+id: mytheme_useraccountmenu
 theme: mytheme
 region: secondary_menu
 weight: -7
