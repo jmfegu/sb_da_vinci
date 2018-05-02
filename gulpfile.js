@@ -53,7 +53,7 @@ var sassDocOptions = {
         foo: 'Foo group',
         bar: 'Bar group'
     },
-    description: 'Sassdoc for theme phoenix',
+    description: 'Sassdoc for Da_vinci theme',
 };
 
 /********** TASKS ***************/

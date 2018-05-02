@@ -33,7 +33,7 @@
       prerender: false,
       autoplay: false,
       autoloadSegments: false,
-      path: '/themes/contrib/phoenix/js/utils/menu-svg.json'
+      path: '/themes/contrib/da_vinci/js/utils/menu-svg.json'
     };
     var menu_svg_init;
     var menu_svg_x = false;

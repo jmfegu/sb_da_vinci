@@ -1436,6 +1436,12 @@ img {
   max-width: 100%;
 }
 
+audio,
+canvas,
+video {
+  max-width: 100%;
+}
+
 .menu-item {
   padding: 0;
 }
@@ -1580,6 +1586,10 @@ img {
   cursor: pointer;
   display: block;
   padding: .75rem 1rem;
+}
+
+.progress {
+  max-width: 100%;
 }
 
 .progress__track {
