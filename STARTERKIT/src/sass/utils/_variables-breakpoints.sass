@@ -3,56 +3,42 @@
 ////
 
 /// > 360px.
-$small: 22.5rem
+$small: 360px
 
 /// > 480px.
-$x-small: 30rem
+$x-small: 480px
 
 /// > 768px.
-$medium: 48.5rem
+$medium: 768px
 
-/// > 1024px.
-$large: 64rem
+/// > 1170px.
+$large: 1170px
 
 /// > 1280px.
-$x-large: 80rem
+$x-large: 1280px
 
 /// > 1440px.
-$xx-large: 90rem
+$xx-large: 1440px
 
 /// > 1920px.
-$monster: 120rem
+$monster: 1920px
 
 // From 0 to breakpoint.
 
-/// @ignore Below-small.
-$below-x-small: $x-small - 00.01rem
+/// Below $x-small (479px).
+$below-x-small: $x-small - 1px
 
-/// @ignore Bellow-medium.
-$bellow-medium: $medium - 00.01rem
+/// Below $medium (767px).
+$bellow-medium: $medium - 1px
 
-/// @ignore Bellow-large.
-$bellow-large: $large - 00.01rem
+/// Below $large (1169px).
+$bellow-large: $large - 1px
 
-/// @ignore Bellow-x-large.
-$bellow-x-large: $x-large - 00.01rem
+/// Below $x-large (1279px).
+$bellow-x-large: $x-large - 1px
 
-/// @ignore Bellow-xx-large.
-$below-xx-large: $xx-large - 00.01rem
+/// Below $xx-large (1439px).
+$below-xx-large: $xx-large - 1px
 
-/// @ignore Bellow-monster.
-$bellow-monster: $monster - 00.01rem
-
-// Between two breakboints.
-
-/// @ignore From x-small to bellow-small.
-$small-x-small: $small $below-x-small
-
-/// @ignore From small to bellow-medium.
-$x-small-medium: $x-small $bellow-medium
-
-/// @ignore From medium to bellow-large.
-$medium-large: $medium $bellow-large
-
-/// @ignore From large to bellow-monster.
-$large-monster: $large $bellow-monster
+/// Below $monster (1919px).
+$bellow-monster: $monster - 1px
