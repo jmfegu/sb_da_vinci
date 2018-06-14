@@ -38,73 +38,84 @@
   &:not(:nth-child(#{$items}n))
     margin-right: 2%
 
-=icomoon($image, $font-size, $color, $size: $font-size, $bg-color: transparent, $br-radius: 0, $pseudo: before)
+=icomoon($image, $font-size, $color, $bg-size: $font-size, $bg-color: transparent, $br-radius: 0, $pseudo: before)
   @extend .hide-accessible
-
-  &:#{$pseudo}
-    align-items: center
-    background-color: $bg-color
-    border-radius: $br-radius
-    color: $color
-    content: $image
-    display: flex
-    font-family: $davinci-font
-    font-size: calc-rem($font-size)
-    height: calc-rem($size)
-    justify-content: center
-    line-height: 1
-    width: calc-rem($size)
-
-=icomoon-text($image, $font-size, $color, $padding: $font-size, $position: center, $side: left, $size: $font-size, $bg-color: transparent, $br-radius: 0, $pseudo: before)
-  position: relative
-  @if $side == right
-    padding-right: calc-rem($padding)
-  @else
-    padding-left: calc-rem($padding)
-
-  &:#{$pseudo}
-    align-items: center
-    background-color: $bg-color
-    border-radius: $br-radius
-    color: $color
-    content: $image
-    display: flex
-    font-family: $davinci-font
-    font-size: calc-rem($font-size)
-    height: calc-rem($size)
-    justify-content: center
-    line-height: 1
-    position: absolute
-    width: calc-rem($size)
-    @if $side == right
-      right: 0
-    @else
-      left: 0
-    @if $position == top
-      top: 0
-    @else if $position == bottom
-      bottom: 0
-    @else
-      top: 50%
-      transform: translate(0, -50%)
-
-=icomoon-v2($image, $size, $color, $pseudo: before)
-  @extend .hide-accessible
+  background-color: $bg-color
+  border-radius: $br-radius
   display: block
-  height: $size
+  height: calc-rem($bg-size)
   position: relative
-  width: $size
+  width: calc-rem($bg-size)
 
   &:#{$pseudo}
     color: $color
     content: $image
     font-family: $davinci-font
-    font-size: $size
+    font-size: calc-rem($font-size)
     left: 50%
     line-height: 1
     position: absolute
     top: 50%
     transform: translate(-50%, -50%)
+
+=icomoon-text($image, $font-size, $color, $position: left, $align: center, $bg-size: $font-size, $bg-color: transparent, $br-radius: 0, $pseudo: before)
+  padding-#{$position}: calc-rem($bg-size / 1px * 1.25px)
+  position: relative
+
+  &:#{$pseudo}
+    align-items: center
+    background-color: $bg-color
+    border-radius: $br-radius
+    color: $color
+    content: $image
+    display: flex
+    font-family: $davinci-font
+    font-size: calc-rem($font-size)
+    height: calc-rem($bg-size)
+    justify-content: center
+    line-height: 1
+    position: absolute
+    width: calc-rem($bg-size)
+
+    @if $position == 'top'
+      top: 0
+      @if $align == 'start'
+        left: 0
+      @else if $align == 'center'
+        left: 50%
+        transform: translateX(-50%)
+      @else if $align == 'end'
+        right: 0
+
+    @else if $position == 'right'
+      right: 0
+      @if $align == 'start'
+        top: 0
+      @else if $align == 'center'
+        top: 50%
+        transform: translateY(-50%)
+      @else if $align == 'end'
+        bottom: 0
+
+    @else if $position == 'bottom'
+      bottom: 0
+      @if $align == 'start'
+        left: 0
+      @else if $align == 'center'
+        left: 50%
+        transform: translateX(-50%)
+      @else if $align == 'end'
+        right: 0
+
+    @else if $position == 'left'
+      left: 0
+      @if $align == 'start'
+        top: 0
+      @else if $align == 'center'
+        top: 50%
+        transform: translateY(-50%)
+      @else if $align == 'end'
+        bottom: 0
 
 =image-cover
   overflow: hidden
