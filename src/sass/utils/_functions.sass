@@ -32,7 +32,7 @@
   @if type-of($value) != 'number'
     @warn 'values: #{$value} is not a number'
     @return null
-  $rem-size: $value / 16px
+  $rem-size: $value / $rem-base
   @return #{$rem-size}rem
 
 /// Slightly lighten a color
