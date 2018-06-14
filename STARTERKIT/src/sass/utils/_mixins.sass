@@ -137,8 +137,12 @@
   &:hover
     background: none
 
-/// Absolute link
-=gradient($direction: to top, $color-from: transparent, $color-to: transparent, $pseudo: after)
+/// Gradient
+=gradient($direction: to top, $color-from: transparent, $color-to: transparent)
+  background: linear-gradient(#{$direction}, #{$color-from}, #{$color-to})
+
+/// Absolute gradient
+=absolute-gradient($direction: to top, $color-from: transparent, $color-to: transparent, $pseudo: after)
   position: relative
 
   &:#{$pseudo}
@@ -150,5 +154,3 @@
     position: absolute
     top: 0
     width: 100%
-
-
