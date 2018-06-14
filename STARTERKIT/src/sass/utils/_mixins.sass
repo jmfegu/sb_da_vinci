@@ -163,3 +163,38 @@
     position: absolute
     top: 0
     width: 100%
+
+
+=button($color: primary)
+  @extend %buttons
+  transition: .2s
+
+  @if $color == primary
+    background-color: $secondary-color
+
+    &:hover
+      background-color: $main-color-02
+      transition: .2s
+
+  @else if $color == secondary
+    background-color: $main-color-02
+
+    &:hover
+      background-color: $main-color
+      transition: .2s
+
+  @else if $color == disabled
+    background-color: transparent
+    border-color: $ui-03
+    color: $ui-03
+    cursor: default
+
+  @else if $color == inverse
+    background-color: transparent
+    border-color: $white
+    color: $white
+
+    &:hover
+      background-color: $white
+      color: $main-color
+      transition: .2s
