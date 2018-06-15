@@ -10,8 +10,8 @@ dependencies:
     - da_vinci
 id: da_vinci_mobile_main_menu
 theme: da_vinci
-region: sliding_menu
-weight: 0
+region: sliding_panel
+weight: -7
 provider: null
 plugin: 'system_menu_block:main'
 settings:

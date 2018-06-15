@@ -27,6 +27,7 @@ regions:
   top_bar: 'Extra Top bar'
   secondary_menu: 'Secondary menu'
   sliding_menu: 'Sliding menu'
+  sliding_panel: 'Sliding panel'
   header: 'Header'
   slick_fullpage: 'Slick Full Page'
   highlighted: 'Highlighted'

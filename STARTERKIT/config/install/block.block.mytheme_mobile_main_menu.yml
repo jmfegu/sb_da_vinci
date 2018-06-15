@@ -10,8 +10,8 @@ dependencies:
     - mytheme
 id: mytheme_mobile_main_menu
 theme: mytheme
-region: sliding_menu
-weight: 0
+region: sliding_panel
+weight: -7
 provider: null
 plugin: 'system_menu_block:main'
 settings:
