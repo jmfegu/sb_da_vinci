@@ -25,8 +25,7 @@ libraries-override:
 
 regions:
   top_bar: 'Extra Top bar'
-  secondary_menu: 'Secondary menu'
-  sliding_menu: 'Sliding menu'
+  secondary_menu: 'Secondary menu'  
   sliding_panel: 'Sliding panel'
   header: 'Header'
   slick_fullpage: 'Slick Full Page'
