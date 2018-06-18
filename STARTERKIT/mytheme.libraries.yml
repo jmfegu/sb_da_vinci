@@ -49,11 +49,8 @@ routeExample:
       css/vendors/slick.css: {}
       css/vendors/jquery.selectBox.css: {}
 
-
-# Dynamic Path.
-# Add {{ attach_library('da_vinci/name_library') }} in a specific Template.
-
 # Dynamic Path (Need attach)
+# Add {{ attach_library('da_vinci/name_library') }} in a specific Template.
 floating-menu:
   js:
     js/scroll.js: {}
