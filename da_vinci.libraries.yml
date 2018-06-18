@@ -12,6 +12,7 @@ global-js:
     js/utils/menu-svg.js: {}
     js/da-vinci.js: {}
     js/custom.js: {}
+    js/sliding-panel.js: {}
     js/svg.js: {}
     js/search.js: {}
   dependencies:
