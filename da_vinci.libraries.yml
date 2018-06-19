@@ -20,3 +20,20 @@ global-js:
     - core/modernizr
     - core/drupal
 
+# User login.
+user-login:
+  css:
+    theme:
+      css/user-login.css: {}
+
+# User register.
+user-register:
+  css:
+    theme:
+      css/user-register.css: {}
+
+# User password.
+user-password:
+  css:
+    theme:
+      css/user-password.css: {}

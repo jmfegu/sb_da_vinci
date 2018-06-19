@@ -48,6 +48,7 @@ function da_vinci_preprocess_html(&$variables) {
   }else{
     $variables['#attached']['library'][] = 'da_vinci/'.$path_args[1];
   }
+  
 }
 
 /**

@@ -1,4 +1,3 @@
-// IAC
 form
   // Inline elements
   .form--inline
@@ -20,6 +19,9 @@ form
     display: flex
     justify-content: flex-end
     width: 100%
+    +breakpoint(0 $below-x-small)
+      transform: scale(.73)
+      transform-origin: right
 
   // Action wrapper
   .form-actions
@@ -170,69 +172,7 @@ form
     text-transform: uppercase
 
 // Check boxes & radios
-
 .form-checkboxes,
 .form-radios
   .form-item
     margin: 0 .5rem .5rem 0
-
-// DAVINCI
-//.old-form-styles
-  input:not(.form-checkbox):not(.form-radio):not(.form-file):not(.form-submit),
-  select,
-  textarea
-    +border(1, solid, $border)
-    +padding(8, 8, 8, 8)
-    +font-size(13)
-    background-color: $white
-    color: $blue
-    max-width: 100%
-    outline: none
-
-  input:not(.form-checkbox):not(.form-radio):not(.form-file):not(.form-submit),
-  select
-    +height(27)
-
-  input[type='search']
-    box-sizing: border-box
-
-  .fieldset-legend,
-  label:not(.option)
-    font-weight: 600
-    +margin-bottom(5)
-    +font-size(13)
-    text-transform: uppercase
-    display: block
-    color: $blue
-
-  .description
-    +margin-top(5)
-
-  .form-type
-    &-radio,
-    &-checkbox
-      +margin-left(0)
-      input
-        +margin-right(5)
-
-  .form-item,
-  .field--type-datetime
-    > label,
-    > .label
-      +font-size(13)
-      font-weight: bold
-      color: $blue
-      text-transform: uppercase
-
-  .password-strength
-    +margin(8, 0, 8, 0)
-    +font-size(13)
-
-  .field-suffix
-    +margin-left(5)
-    .link
-      +margin-left(10)
-      text-transform: uppercase
-      +font-size(10)
-      color: $secondary-color
-
