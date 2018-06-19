@@ -19,43 +19,40 @@ color.preview:
     color/preview.js: {}
   dependencies:
     - color/drupal.color
-
-# Examples.
-
-# Front Path.
-home:
-  js:
-    js/in-view-home.js: {}
-    js/custom-home.js: {}
+      
+# Front path.
+front:
+  js:    
+    #js/vendors/slick.min.js: {}
+    js/home.js: {}
   css:
     theme:
       css/home.css: {}
 
-404:
-  js:
-    js/in-view-404.js: {}
-
-# General Path.
-# Automatically loaded.
-routeExample:
-  js:
-    js/vendors/jquery.cycle.all.js: {}
-    js/vendors/countUp.js: {}
-    js/vendors/jquery.selectBox.js: {}
-    js/vendors/slick.min.js: {}
-
+# User login.
+user-login:
   css:
     theme:
-      css/vendors/slick.css: {}
-      css/vendors/jquery.selectBox.css: {}
+      css/user-login.css: {}
 
+# User register.
+user-register:
+  css:
+    theme:
+      css/user-register.css: {}      
+
+# User password.
+user-password:
+  css:
+    theme:
+      css/user-password.css: {}    
+      
+# Examples.
 # Dynamic Path (Need attach)
 # Add {{ attach_library('da_vinci/name_library') }} in a specific Template.
 floating-menu:
-  js:
-    js/scroll.js: {}
-    js/project-floating-menu.js: {}
-
-custom-taxonomy:
-  js:
-    js/custom-taxonomy.js: {}
+  js:    
+    js/example.js: {}
+  css:
+    theme:
+      css/example.css: {}   
