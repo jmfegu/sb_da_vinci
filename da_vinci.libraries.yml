@@ -13,8 +13,7 @@ global-js:
     js/da-vinci.js: {}
     js/custom.js: {}
     js/sliding-panel.js: {}
-    js/svg.js: {}
-    js/search.js: {}
+    js/svg.js: {}    
   dependencies:
     - core/jquery
     - core/modernizr

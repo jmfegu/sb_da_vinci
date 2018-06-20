@@ -3,38 +3,22 @@ $search-icon-color: $white
 $search-icon-active-color: $secondary-color
 
 .search-block-form
-  align-items: center
-  display: flex
-  flex-flow: row wrap
-
-  &.active
-    .form-search
-      opacity: 1
-      transition: .2s
-      visibility: visible
-
-    .ico-search
-      +icomoon($ico-close, 24px, $search-icon-active-color, 32px)
-      transition: .2s
-      z-index: 1
-
   form
-    .form-search
-      height: 100%
-      max-width: calc-rem(400px)
-      opacity: 0
-      padding-right: 2rem
-      position: absolute
-      right: 0
-      top: 0
-      transition: .2s
-      visibility: hidden
-      width: 100%
+    align-items: center
+    display: flex
+    flex-flow: row wrap
+
+    .form-type-search
+      margin: 0
+
+      input
+        padding: .25rem
 
     .form-actions
-      display: none
+      +icomoon($ico-search, 28px, $search-icon-color, 32px)
+      margin-left: .5rem
+      position: relative
 
-  .ico-search
-    +icomoon($ico-search, 24px, $search-icon-color, 32px)
-    cursor: pointer
-    transition: .2s
+    .form-submit
+      +absolute-link
+      
