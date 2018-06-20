@@ -11,29 +11,29 @@ $error-color: $red
   color: $white
   padding: $container-padding
 
+  &--wrapper
+    @extend .restricted-container
+
   + .messages
     margin: 0
-
-  > div
-    @extend .restricted-container
 
   &--status
     background-color: $status-color
 
-    > div
-      +icomoon-text($ico-check, 24px, $white, left, start, 30px)
+    .messages--wrapper
+      +icomoon-text($ico-check, 24px, $white, left, start)
 
   &--warning
     background-color: $warning-color
 
-    > div
-      +icomoon-text($ico-warning, 24px, $white, left, start, 30px)
+    .messages--wrapper
+      +icomoon-text($ico-warning, 24px, $white, left, start)
 
   &--error
     background-color: $error-color
 
-    > div
-      +icomoon-text($ico-stop, 24px, $white, left, start, 30px)
+    .messages--wrapper
+      +icomoon-text($ico-stop, 24px, $white, left, start)
 
   a
     color: $white
