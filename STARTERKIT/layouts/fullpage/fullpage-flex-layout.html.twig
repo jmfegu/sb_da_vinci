@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * Template for a 3 column layout: Two sidebars and main content.
+ */
+#}
+<div class="panel-fullpage-flex-layout">
+
+  {% if content.pre_content %}
+  <div class="region-pre-content">
+    {{ content.pre_content }}
+  </div>
+  {% endif %}
+
+  {% if content.header or content.main or content.left_sidebar or content.right_sidebar %}
+  <div class="region-content-wrapper">
+
+    {% if content.header %}
+    <div class="region-header">
+      {{ content.header }}
+    </div>
+    {% endif %}
+
+    {% if content.main or content.left_sidebar or content.right_sidebar %}
+    <div class="region-content">
+      {% if content.main %}
+        {{ content.main }}
+      {% endif %}
+      {% if content.left_sidebar %}
+        {{ content.left_sidebar }}
+      {% endif %}
+      {% if content.right_sidebar %}
+        {{ content.right_sidebar }}
+      {% endif %}
+    </div>
+    {% endif %}
+
+  </div>
+  {% endif %}
+
+</div>
