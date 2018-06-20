@@ -5,11 +5,11 @@ dependencies:
   theme:
     - mytheme
 _core:
-  default_config_hash: MuufNxAiVpV48K31biKzdkYw5GXyRXO9LgZ2tRUsyBo
+  default_config_hash: uw4Iv8-0ki01HdrBlmNassH4C2RwI8k7lfAOef6kW38
 id: mytheme_page_title
 theme: mytheme
-region: breadcrumb
-weight: -6
+region: content
+weight: -8
 provider: null
 plugin: page_title_block
 settings:

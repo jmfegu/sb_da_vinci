@@ -7,11 +7,11 @@ dependencies:
   theme:
     - mytheme
 _core:
-  default_config_hash: q8pmwK43oh45qbZB8j5hDAV2BZ1g5zGzhqkf5bUeV_4
+  default_config_hash: ws_wACFj-XWP1qMNDk1-zwPh1LrGEY96P90KVM17S0c
 id: mytheme_help
 theme: mytheme
 region: content
-weight: -6
+weight: -7
 provider: null
 plugin: help_block
 settings:

@@ -7,11 +7,11 @@ dependencies:
   theme:
     - mytheme
 _core:
-  default_config_hash: 1bvBQLr6HSfz8BJwUOvLJo8Fw8Y6vTEKA6Cp62j1-m8
+  default_config_hash: YJZbxU5KUN7Kjg9DWHyrmg_CxqVkqVdrWT8SJYCeshQ
 id: mytheme_content
 theme: mytheme
 region: content
-weight: 0
+weight: -4
 provider: null
 plugin: system_main_block
 settings:
