@@ -4,12 +4,15 @@ $header-background-color: $secondary-color
 .layout-container
 
   > header
+    width: 100%
     z-index: 10
 
     .wrapper-header
       background-color: $header-background-color
+      padding: $container-padding
 
     .site-header
+      @extend .restricted-container
       align-items: center
       display: flex
       flex-direction: row-reverse

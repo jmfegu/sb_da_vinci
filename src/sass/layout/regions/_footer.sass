@@ -1,12 +1,26 @@
 // Footer.
 $footer-background-color: $secondary-color
+$footer-info-background-color: $secondary-shade-color
 
-.layout-container
-  > footer
+.site-footer
+  .region
+    @extend .restricted-container
+
+  .footer-wrapper
     background-color: $footer-background-color
+    padding: $container-padding
 
-    .footer-wrapper
+    .region-footer
       align-items: center
       display: flex
       flex-flow: row wrap
-      justify-content: space-between
+      justify-content: flex-end
+
+  .footer-info-wrapper
+    background-color: $footer-info-background-color
+    padding: $container-padding
+
+    .region-footer-info
+      display: flex
+      flex-flow: row wrap
+      justify-content: center

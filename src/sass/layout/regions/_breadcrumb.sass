@@ -3,7 +3,7 @@ $breadcrumb-background-color: $white
 
 .site-breadcrumb
   background-color: $breadcrumb-background-color
+  padding: $container-padding
 
   .region-breadcrumb
-    > *:not(:last-child)
-      margin-bottom: .25rem
+    @extend .restricted-container    
