@@ -1,17 +1,14 @@
-uuid: 9b48b0cb-64be-4ad2-86c4-32961f317e46
-langcode: en
+uuid: 97f197e0-79e3-4474-b1fc-0914e22ab65f
+langcode: es
 status: true
 dependencies:
   config:
     - views.view.who_s_online
   module:
-    - user
     - views
   theme:
     - da_vinci
-_core:
-  default_config_hash: xBiFtSOkScv98bcoChsACj-EOaLB26p5R62FD2m6gTI
-id: views_block__who_s_online_who_s_online_block
+id: da_vinci_views_block__who_s_online_who_s_online_block
 theme: da_vinci
 region: sidebar_first
 weight: 0
@@ -24,11 +21,4 @@ settings:
   label_display: visible
   views_label: ''
   items_per_page: none
-visibility:
-  user_role:
-    id: user_role
-    roles:
-      authenticated: authenticated
-    negate: false
-    context_mapping:
-      user: '@user.current_user_context:current_user'
+visibility: {  }

@@ -1,14 +1,12 @@
-uuid: c329fe4b-fb90-4e9e-ab32-576e7a896388
-langcode: en
+uuid: f7a74cc5-009c-4f2d-8b0f-157df38c13f9
+langcode: es
 status: true
 dependencies:
   module:
     - user
   theme:
     - da_vinci
-_core:
-  default_config_hash: KVwc-WSndvD_Y3bzIoZ6srKQsDcqhJ4tcpSmFAd_C-I
-id: userlogin
+id: da_vinci_user_login
 theme: da_vinci
 region: sidebar_first
 weight: 0
