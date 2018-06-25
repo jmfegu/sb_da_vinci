@@ -3,9 +3,9 @@
  * Custom Javascript for the RWD menu behavior.
  */
 
-(function (Drupal, $) {
+'use strict';
 
-  'use strict';
+(function (Drupal, $) {
 
   Drupal.behaviors.rwdElements = {
     attach: function (context, settings) {

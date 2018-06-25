@@ -3,6 +3,8 @@
  * Da Vinci Custom Code of the javascript behaviour.
  */
 
+'use strict';
+
 (function ($) {
   Drupal.behaviors.davinciTheme = {
     attach: function (context) {

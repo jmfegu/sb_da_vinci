@@ -1,11 +1,17 @@
+/**
+ * @file
+ * Back to top.
+ */
+
+'use strict';
+
 (function (Drupal,$) {
   $(document).ready(function() {
 
     // Variables.
-
-    var backToTop = $('.back-to-top'),
-        windowHeight = $(window).height(),
-        count = 0;
+    var window = $(window),
+        backToTop = $('.back-to-top'),
+        windowHeight = window.height();
 
     // Events.
 
@@ -21,6 +27,6 @@
       $('html, body').animate({
         scrollTop: 0
       }, 'slow');
-    })
+    });
   });
 })(Drupal, jQuery);

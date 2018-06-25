@@ -3,6 +3,8 @@
  * Sliding panel.
  */
 
+'use strict';
+
 (function (Drupal, $) {
   $(document).ready(function () {
 

@@ -1,3 +1,10 @@
+/**
+ * @file
+ * In view.
+ */
+
+'use strict';
+
 (function ($) {
 
   var $window = $(window);
