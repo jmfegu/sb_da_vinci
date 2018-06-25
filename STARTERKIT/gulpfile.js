@@ -48,7 +48,7 @@ var sassDocOptions = {
     alias: true,
     watermark: true
   },
-  description: 'Sassdoc for da_vinci theme',
+  description: 'Sassdoc for mytheme theme',
 };
 
 /********** TASKS ***************/
@@ -236,7 +236,7 @@ gulp.task('sasslint', function () {
   return gulp.src(srcAssets.styles + '**/*.s+(a|c)ss')
     .pipe(sassLint({
       options: {
-        configFile: 'da_vinci.sass-lint.yml'
+        configFile: 'mytheme.sass-lint.yml'
       }
     }))
     .pipe(sassLint.format())
@@ -317,7 +317,7 @@ gulp.task('jenkinsSassLintReport', function () {
   return gulp.src('src/sass/**/*.sass')
     .pipe(sassLint({
       options: {
-        configFile: 'da_vinci.sass-lint.yml',
+        configFile: 'mytheme.sass-lint.yml',
         formatter: 'checkstyle'
       }
     }))
@@ -335,7 +335,7 @@ gulp.task('sassLintReport', function () {
   return gulp.src('src/sass/**/*.sass')
     .pipe(sassLint({
       options: {
-        configFile: 'da_vinci.sass-lint.yml',
+        configFile: 'mytheme.sass-lint.yml',
         formatter: 'html'
       }
     }))

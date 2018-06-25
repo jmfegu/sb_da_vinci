@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Lists available colors and color schemes for the Da_Vinci theme.
+ * Lists available colors and color schemes for the mytheme theme.
  */
 
 $info = [
@@ -75,7 +75,7 @@ $info = [
     'drupalSettings' => [
       'color' => [
         // Put the logo path into JavaScript for the live preview.
-        'logo' => theme_get_setting('logo.url', 'da_vinci'),
+        'logo' => theme_get_setting('logo.url', 'mytheme'),
       ],
     ],
   ],

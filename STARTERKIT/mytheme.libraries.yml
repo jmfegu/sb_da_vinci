@@ -49,7 +49,7 @@ user-password:
       
 # Examples.
 # Dynamic Path (Need attach)
-# Add {{ attach_library('da_vinci/name_library') }} in a specific Template.
+# Add {{ attach_library('mytheme/name_library') }} in a specific Template.
 floating-menu:
   js:    
     js/example.js: {}
