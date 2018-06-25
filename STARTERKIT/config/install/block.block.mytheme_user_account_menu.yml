@@ -1,4 +1,4 @@
-uuid: e1ff9e74-b059-4032-8d13-b0e2068d6d4d
+uuid: 
 langcode: en
 status: true
 dependencies:
@@ -6,15 +6,12 @@ dependencies:
     - system.menu.account
   module:
     - system
-    - user
   theme:
     - mytheme
-_core:
-  default_config_hash: aZybgbQpAe9htsM--35J2v4rpUE6qFnFk9RfjhLgy-k
-id: mytheme_useraccountmenu
+id: mytheme_user_account_menu
 theme: mytheme
 region: secondary_menu
-weight: -7
+weight: 0
 provider: null
 plugin: 'system_menu_block:account'
 settings:
@@ -24,11 +21,4 @@ settings:
   label_display: visible
   level: 1
   depth: 0
-visibility:
-  user_role:
-    id: user_role
-    roles:
-      authenticated: authenticated
-    negate: false
-    context_mapping:
-      user: '@user.current_user_context:current_user'
+visibility: {  }
