@@ -12,7 +12,6 @@ var autoprefixer = require('autoprefixer'),
   jsHint = require('gulp-jshint'),
   jsHintStylish = require('jshint-stylish'),
   postCss = require('gulp-postcss'),
-  pngquant = require('imagemin-pngquant'),
   process = require('yargs').argv,
   sassDoc = require('sassdoc'),
   sass = require('gulp-sass'),
@@ -28,13 +27,14 @@ var path = 'localhost';
 // Paths
 
 var srcAssets = {
-  styles: 'src/sass/',
-  images: 'src/images/'
+  images: 'src/images/',
+  styles: 'src/sass/'
 };
 
 var distAssets = {
-  styles: 'css/',
-  js: 'js/'
+  images: 'images/',
+  js: 'js/',
+  styles: 'css/'
 };
 
 // Sass Doc
@@ -48,12 +48,7 @@ var sassDocOptions = {
     alias: true,
     watermark: true
   },
-  groups: {
-    'undefined': 'Ungrouped',
-    foo: 'Foo group',
-    bar: 'Bar group'
-  },
-  description: 'Sassdoc for theme phoenix',
+  description: 'Sassdoc for da_vinci theme',
 };
 
 /********** TASKS ***************/
@@ -61,7 +56,7 @@ var sassDocOptions = {
 gulp.task('default', function () {
   console.log('');
   console.log('Cleaning tasks'.yellow);
-  console.log('gulp ' + 'clean:css'.cyan + '                           ' + '# Clean css files from css directory'.grey);
+  console.log('gulp ' + 'clean:styles'.cyan + '                           ' + '# Clean css files from css directory'.grey);
   console.log('');
   console.log('Compiling tasks'.yellow);
   console.log('gulp ' + 'imagemin'.cyan + '                            ' + '# Minifiy your images in ./src/images into ./images'.grey);
@@ -93,26 +88,47 @@ gulp.task('default', function () {
 
 /************* CLEANING *****************/
 
-// Clean css
-gulp.task('clean:css', function () {
-  return del([
-    distAssets.styles + '*.css'
-  ]);
+gulp.task('clean:styles', function () {
+  return del([distAssets.styles + '*.css']).then(paths => {
+    console.log('Deleting css from:', distAssets.styles.magenta, '\n', paths.join('\n').magenta);
+  });
+});
+
+// Clean images
+gulp.task('clean:images', function () {
+  return del([distAssets.images + '*', '!' + distAssets.images + '*.txt', , '!' + distAssets.images + '*.md']).then(paths => {
+    console.log('Deleting images from:', distAssets.images.magenta, '\n', paths.join('\n').magenta);
+  });
 });
 
 /************* COMPILING *****************/
 // Minify images
-gulp.task('imagemin', function () {
-  return gulp.src('./src/images/*')
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{
-        removeViewBox: false
-      }],
-      use: [pngquant()]
-    }))
-    .pipe(gulp.dest('./images'));
-});
+gulp.task('imagemin', ['clean:images'], () =>
+  gulp.src(srcAssets.images + '*')
+  .pipe(imagemin([
+    imagemin.gifsicle({
+      interlaced: true
+    }),
+    imagemin.jpegtran({
+      progressive: true
+    }),
+    imagemin.optipng({
+      optimizationLevel: 5
+    }),
+    imagemin.svgo({
+      plugins: [{
+          removeViewBox: true
+        },
+        {
+          cleanupIDs: false
+        }
+      ]
+    })
+  ], {
+    verbose: true
+  }))
+  .pipe(gulp.dest(distAssets.images))
+);
 
 // Css to development
 gulp.task('mainStyles:dev', function () {
@@ -144,7 +160,6 @@ gulp.task('pagesStyles:dev', function () {
     .pipe(gulp.dest(distAssets.styles))
     .pipe(browserSync.stream());
 });
-
 
 // Css to producction
 gulp.task('mainStyles:pro', function () {
@@ -180,6 +195,20 @@ gulp.task('pagesStyles:pro', function () {
     .pipe(gulp.dest(distAssets.styles));
 });
 
+gulp.task('pagesStyles:pro', function () {
+  return gulp.src(srcAssets.styles + 'pages/**/*.s+(a|c)ss')
+    .pipe(sassGlob())
+    .pipe(sass({
+      errLogToConsole: true,
+      outputStyle: 'compressed'
+    }).on('error', sass.logError))
+    .pipe(postCss([
+      autoprefixer({
+        browsers: ['> 1%', 'ie 8', 'last 2 versions']
+      })
+    ]))
+    .pipe(gulp.dest(distAssets.styles));
+});
 
 /************* SassDoc *****************/
 
@@ -216,7 +245,7 @@ gulp.task('sasslint', function () {
 
 // jsHint
 gulp.task('jshint', function () {
-  return gulp.src([distAssets.js + '**/*.js'])
+  return gulp.src([distAssets.js + '*.js'])
     .pipe(jsHint())
     .pipe(jsHint.reporter(jsHintStylish))
     .pipe(browserSync.stream());
@@ -336,11 +365,11 @@ gulp.task('jsHintReport', function () {
 /************** TIME TO WORK ***********************/
 
 // Init enviroment
-gulp.task('init', ['clean:css', 'imagemin', 'mainStyles:dev', 'pagesStyles:dev']);
+gulp.task('init', ['clean:styles', 'imagemin', 'mainStyles:dev', 'pagesStyles:dev']);
 
 // Development enviroment
-gulp.task('dev:watch', ['mainStyles:dev', 'pagesStyles:dev', 'watch']);
+gulp.task('dev:watch', ['imagemin', 'mainStyles:dev', 'pagesStyles:dev', 'watch']);
 gulp.task('dev:browsersync', ['mainStyles:dev', 'pagesStyles:dev', 'browsersync']);
 
 // Production enviroment
-gulp.task('pro', ['clean:css', 'mainStyles:pro', 'pagesStyles:pro', 'jshint']);
+gulp.task('pro', ['clean:styles', 'mainStyles:pro', 'pagesStyles:pro', 'jshint']);
