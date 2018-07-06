@@ -10,6 +10,12 @@
 =here($color: $red)
   border: 2px solid $color
 
+/// Border.
+=border($width: 1px, $style: solid, $color: $border, $position: style)
+  border-#{$position}: $style
+  border-color: $color
+  border-width: $width
+
 /// Mixins for clear.
 =clearfix()
   &:after
