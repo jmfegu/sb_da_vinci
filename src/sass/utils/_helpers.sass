@@ -23,11 +23,6 @@
     list-style-image: none
     list-style-type: none
 
-/// Add content in to grid.
-.restricted-container
-  margin: 0 auto
-  max-width: $container-width
-
 /// Hide element.
 .hide-element
   visibility: hidden
@@ -37,16 +32,6 @@
   color: transparent
   font-size: 0
   line-height: 0
-
-/// Visible from medium.
-.hide-rwd-mobile
-  +breakpoint(0 $bellow-medium)
-    display: none
-
-/// Visible from large.
-.hide-rwd-large
-  +breakpoint(0 $bellow-large)
-    display: none
 
 .pulse
   animation-name: pulse

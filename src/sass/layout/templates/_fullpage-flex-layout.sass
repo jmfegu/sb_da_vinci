@@ -5,16 +5,16 @@
     padding: 0 $container-padding
 
     .block-region-pre-content
-      @extend .restricted-container
+      +container
 
   .region-content-wrapper
     padding: ($container-padding * 2) $container-padding
 
     .region-header
-      @extend .restricted-container
+      +container
 
     .region-content
-      @extend .restricted-container
+      +container
       align-items: stretch
       display: flex
       flex-direction: column-reverse
