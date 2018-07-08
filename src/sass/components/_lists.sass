@@ -1,16 +1,22 @@
 // Lists.
-ul
-  &.links
-    @extend .simple-list
-    font-size: calc-rem(14px)
-    line-height: 1.5
-
 .item-list
   ul
-    @extend .simple-list
+    +clean-list
 
     li
       margin-left: 0
 
 .tips
   padding-left: 1.5rem
+
+ul
+  +clean-list
+
+  &.arrows-list-style
+    +arrows-list-style
+
+  &.squares-list-style
+    +squares-list-style
+
+  &.links
+    +clean-list
