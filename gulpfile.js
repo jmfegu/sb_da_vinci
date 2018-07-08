@@ -7,11 +7,11 @@ var autoprefixer = require('autoprefixer'),
   converter = require('sass-convert'),
   color = require('colors'),
   del = require('del'),
-  gulp = require('gulp'),  
+  gulp = require('gulp'),
   imagemin = require('gulp-imagemin'),
   jsHint = require('gulp-jshint'),
   jsHintStylish = require('jshint-stylish'),
-  postCss = require('gulp-postcss'),  
+  postCss = require('gulp-postcss'),
   process = require('yargs').argv,
   sassDoc = require('sassdoc'),
   sass = require('gulp-sass'),
@@ -89,14 +89,21 @@ gulp.task('default', function () {
 /************* CLEANING *****************/
 
 gulp.task('clean:styles', function () {
-  return del([distAssets.styles + '*.css']).then(paths => {
+  return del([
+    distAssets.styles + '*.css',
+    distAssets.styles + 'maps/'
+  ]).then(paths => {
     console.log('Deleting css from:', distAssets.styles.magenta, '\n', paths.join('\n').magenta);
   });
 });
 
 // Clean images
 gulp.task('clean:images', function () {
-  return del([distAssets.images + '*', '!' + distAssets.images + '*.txt', , '!' + distAssets.images + '*.md']).then(paths => {
+  return del([
+    distAssets.images + '*',
+    '!' + distAssets.images + '*.txt',
+    '!' + distAssets.images + '*.md'
+  ]).then(paths => {
     console.log('Deleting images from:', distAssets.images.magenta, '\n', paths.join('\n').magenta);
   });
 });
@@ -164,20 +171,20 @@ gulp.task('pagesStyles:dev', function () {
 // Css to producction
 gulp.task('mainStyles:pro', function () {
   return gulp.src([
-      '!' + srcAssets.styles + 'pages/**/*.s+(a|c)ss',
-      srcAssets.styles + '**/*.s+(a|c)ss'
-    ])
-    .pipe(sassGlob())
-    .pipe(sass({
-      errLogToConsole: true,
-      outputStyle: 'compressed'
-    }).on('error', sass.logError))
-    .pipe(postCss([
-      autoprefixer({
-        browsers: ['> 1%', 'ie 8', 'last 2 versions']
-      })
-    ]))
-    .pipe(gulp.dest(distAssets.styles));
+    '!' + srcAssets.styles + 'pages/**/*.s+(a|c)ss',
+    srcAssets.styles + '**/*.s+(a|c)ss'
+  ])
+  .pipe(sassGlob())
+  .pipe(sass({
+    errLogToConsole: true,
+    outputStyle: 'compressed'
+  }).on('error', sass.logError))
+  .pipe(postCss([
+    autoprefixer({
+      browsers: ['> 1%', 'ie 8', 'last 2 versions']
+    })
+  ]))
+  .pipe(gulp.dest(distAssets.styles));
 });
 
 gulp.task('pagesStyles:pro', function () {
