@@ -81,7 +81,7 @@ gulp.task('default', function () {
   console.log('gulp ' + 'pro'.cyan + '                                ' + '# Run mainStyles:pro to compile to production enviroment, run jshint and run sassdoc.'.grey);
   console.log('');
   console.log('Watching task example'.yellow);
-  console.log('gulp ' + 'watch -h'.cyan + ' localhost'.green + '      ' + '# To configure hosts as davinci.local.'.grey);
+  console.log('gulp ' + 'watch -h'.cyan + ' localhost'.green + '      ' + '# To configure hosts as mytheme.local.'.grey);
   console.log('');
 });
 
@@ -89,14 +89,21 @@ gulp.task('default', function () {
 /************* CLEANING *****************/
 
 gulp.task('clean:styles', function () {
-  return del([distAssets.styles + '*.css']).then(paths => {
+  return del([
+    distAssets.styles + '*.css',
+    distAssets.styles + 'maps/'
+  ]).then(paths => {
     console.log('Deleting css from:', distAssets.styles.magenta, '\n', paths.join('\n').magenta);
   });
 });
 
 // Clean images
 gulp.task('clean:images', function () {
-  return del([distAssets.images + '*', '!' + distAssets.images + '*.txt', , '!' + distAssets.images + '*.md']).then(paths => {
+  return del([
+    distAssets.images + '*',
+    '!' + distAssets.images + '*.txt',
+    '!' + distAssets.images + '*.md'
+  ]).then(paths => {
     console.log('Deleting images from:', distAssets.images.magenta, '\n', paths.join('\n').magenta);
   });
 });
