@@ -71,7 +71,7 @@
       </div>
 
     </div>
-  </header>  
+  </header>
 
   {% if page.sliding_panel %}
   <aside class="js-menu sliding-panel-content">
@@ -130,14 +130,21 @@
   {% endif %}
 
   {% if page.footer or page.footer_info %}
-    <footer class="site-footer">
-      <div class="footer-wrapper">
-        {{ page.footer }}
-      </div>
-      <div class="footer-info-wrapper">
-        {{ page.footer_info }}
-      </div>
-    </footer>
+  <footer class="site-footer">
+
+    {% if page.footer %}
+    <div class="footer-wrapper">
+      {{ page.footer }}
+    </div>
+    {% endif %}
+
+    {% if page.footer_info %}
+    <div class="footer-info-wrapper">
+      {{ page.footer_info }}
+    </div>
+    {% endif %}
+
+  </footer>
   {% endif %}
 
   <div class="back-to-top"></div>
