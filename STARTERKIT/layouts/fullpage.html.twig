@@ -12,7 +12,8 @@
  *   - content.middle: The only panel in the layout.
  */
 #}
-<div class="panel-fullpage" {% if css_id %}{{ css_id }}{% endif %}>
+
+<div class="custom-fullpage" {% if css_id %}{{ css_id }}{% endif %}>
   {% if content.first %}
     <div id="first" class="section region-first">
       {{ content.first }}
@@ -44,6 +45,6 @@
     <div id="sixth" class="section region-sixth">
       {{ content.sixth }}
     </div>
-  {% endif %}    
+  {% endif %}
   #}
 </div>
