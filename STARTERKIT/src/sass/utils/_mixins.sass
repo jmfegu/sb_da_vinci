@@ -34,6 +34,8 @@
   &:hover
     background: none
 
+
+
 /// Button.
 =button($color: primary)
   @extend %buttons
@@ -80,6 +82,12 @@
   background-color: $white
   border-radius: 5px
   padding: 1rem 2rem
+
+=clean-list
+  list-style-image: none
+  list-style-type: none
+  margin: 0
+  padding: 0
 
 /// Mixins for clear.
 =clearfix()
@@ -231,3 +239,19 @@
     top: 50%
     transform: translate(-50%, -50%)
     width: auto
+
+/// Style list - arrows.
+=list-style($list-style)
+
+  @if $list-style == 'arrows'
+    li
+      +icomoon-text($ico-chevron-right, 12px, $light-grey, right, start, 44px)
+      border-bottom: 1px solid $border
+      margin: calc-rem(4px) 0
+      padding-bottom: calc-rem(12px)
+      padding-top: calc-rem(12px)
+
+  @else if $list-style == 'squares'
+    li
+      +icomoon-text($ico-squares, 15px, $main-color, left, start, 24px)
+      margin: calc-rem(20px) 0
