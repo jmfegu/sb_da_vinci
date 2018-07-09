@@ -1,45 +1,41 @@
-////
-/// @group skinr
-/// @type color
-////
-
-/// @ignore Color body.
-//$body-background-color: $cream
-
-/// @ignore Color body.
-//$body-color: $grey
-
-/// @ignore Font Default.
-//$default-font-family: $roboto
+// HTML
 
 /// @ignore Font size.
 //$default-font-size: $rem-base
 
-/// @ignore Font title.
-//$title-font-family: $roboto-condensed
-
-/// @ignore Color title.
-//$title-color: $secondary-shade-color
-
-/// @ignore Color link.
-//$link-color: $main-color
-
-/// @ignore Color link hover.
-//$hover-link-color: tint($link-color, 15%)
-
-// Font size for html.
 //html
   font-size: $default-font-size
 
-// Styles for body.
+// --------------------------------------------------
+
+// BODY
+
+/// @ignore Body background color.
+//$body-background-color: $cream
+
+/// @ignore Default color.
+//$default-color: $grey
+
+/// @ignore Default font family.
+//$default-font-family: $roboto
+
 //body
   background-color: $body-background-color
-  color: $body-color
+  color: $default-color
   font-family: $default-font-family
   font-weight: 400
   line-height: 1.4
 
-// General styles for titles.
+// --------------------------------------------------
+
+// HEADINGS
+
+/// @ignore Titles font family.
+//$title-font-family: $roboto-condensed
+
+/// @ignore Titles color.
+//$title-color: $secondary-shade-color
+
 //h1,
 //h2,
 //h3,
@@ -67,7 +63,6 @@
 //h6
   line-height: 1.4
 
-// Specific style for h1.
 //h1
   font-size: calc-rem(40px)
   line-height: 1.13
@@ -79,41 +74,47 @@
   &.page-title
     margin-top: 0
 
-// Specific style for h2.
 //h2
   font-size: calc-rem(36px)
   +breakpoint($large)
     font-size: calc-rem(40px)
 
-// Specific style for h3.
 //h3
   font-size: calc-rem(32px)
   +breakpoint($large)
     font-size: calc-rem(36px)
 
-// Specific style for h4.
 //h4
   font-size: calc-rem(28px)
   +breakpoint($large)
     font-size: calc-rem(32px)
 
-// Specific style for h5.
 //h5
   font-size: calc-rem(24px)
   +breakpoint($large)
     font-size: calc-rem(28px)
 
-// Specific style for h5.
 //h6
   font-size: calc-rem(20px)
   +breakpoint($large)
     font-size: calc-rem(24px)
 
-// Specific style for paragraph.
+// --------------------------------------------------
+
+// PARAGRAPHS
 //p
   margin: 0 0 1.2rem
 
-// Styles for link.
+// ------------------------------------------------
+
+// LINKS
+
+/// @ignore Link color.
+//$link-color: $main-color
+
+/// @ignore Link hover color.
+//$link-hover-color: tint($link-color, 15%)
+
 //a
   color: $link-color
   display: inline-block
@@ -121,40 +122,78 @@
   transition: color .2s
 
   &:hover
-    color: $hover-link-color
+    color: $link-hover-color
     text-decoration: none
 
-// Font in bold.
-//strong
-  font-weight: 700
+// ------------------------------------------------
+
+// BLOCKQUOTES
+
+/// @ignore Blockquotes color.
+//$blockquote-color: $default-color
+
+/// @ignore Blockquotes font family.
+//$blockquote-font-family: $default-font-family
+
+//blockquote
+  +icomoon-text($ico-quote-start, 32px, $secondary-color, top, start)
+  +icomoon-text($ico-quote-end, 32px, $secondary-color, bottom, end, 32px, transparent, 0, after)
+  border: 0
+  margin: 2rem 0
+  padding-left: 2rem
+  padding-right: 2rem
+  +breakpoint($medium)
+    margin: 2rem 0
+
+  *
+    color: $blockquote-color
+    font-family: $blockquote-font-family
+    font-size: calc-rem(18px)
+    font-style: italic
+    line-height: 1.6
+    +breakpoint($large)
+      font-size: calc-rem(22px)
+
+  > p
+    &:first-child
+      display: block
+      margin-top: 0
+
+    &:last-child
+      margin-bottom: 0
+
+// ------------------------------------------------
+
+// Mark
+
+/// @ignore  Mark Background color.
+//$mark-background-color: $grey
+
+/// @ignore  Mark Color.
+//$mark-color: $white
 
 //mark,
 //.marker
-  background-color: $grey
-  color: $white
+  background-color: $mark-background-color
+  color: $mark-color
   float: right
   font-size: calc-rem(14px)
   padding: .5rem
 
+// ------------------------------------------------
+
+// VARIOUS
+
 //summary
   outline: none
 
-//blockquote
-  border: 3px solid $main-color
-  color: $grey
-  font-family: $title-font-family
-  font-size: calc-rem(24px)
-  margin: 1.5rem 0 1.5rem .5rem
-  padding-left: 1rem
-  +breakpoint($medium)
-    margin: 1.5rem 0 1.5rem 3rem
-
-  > p
-    &:first-child
-      display: inline
+//strong
+  font-weight: 700
 
 //code,
 //kbd,
 //pre,
 //samp
   font-size: calc-rem(13px)
+
+// ------------------------------------------------
