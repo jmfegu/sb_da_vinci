@@ -1,4 +1,28 @@
+// ----------------------------------
+
+// FORMS
+
+$fieldset-border-color: $border
+
+$input-background-color: $white
+$input-border-color: $border
+$input-hover-border-color: $dark-grey
+$input-font-size: 14px
+
+$label-color: $light-grey
+$label-font-size: 14px
+
+$placeholder-font-size: 14px
+
+$select-option-font-size: 14px
+
+$textarea-background-color: $white
+$textarea-border-color: $border
+$textarea-font-size: 14px
+$textarea-hover-border-color: $dark-grey
+
 form
+
   // Inline elements
   .form--inline
     display: flex
@@ -58,9 +82,9 @@ form
   // Label
   .fieldset-legend,
   label
-    color: $light-grey
+    color: $label-color
     display: block
-    font-size: calc-rem(14px)
+    font-size: calc-rem($label-font-size)
     font-weight: 500
     line-height: 1.5
     margin-bottom: 5px
@@ -70,12 +94,12 @@ form
     text-transform: none
 
   fieldset
-    border-color: $border
+    border-color: $fieldset-border-color
     padding: 1rem 1.5rem
 
   input
     &:placeholder
-      font-size: calc-rem(14px)
+      font-size: calc-rem($placeholder-font-size)
 
     &[type='search']
       box-sizing: border-box
@@ -94,28 +118,28 @@ form
     &[type='email'],
     &[type='text'],
     &[type='tel']
-      background-color: $white
-      border: 1px solid $border
-      font-size: calc-rem(14px)
+      background-color: $input-background-color
+      border: 1px solid $input-border-color
+      font-size: calc-rem($input-font-size)
       max-width: 100%
       padding: .5rem
       width: 100%
 
       &:hover
-        border-color: $border
+        border-color: $input-hover-border-color
 
   select,
   textarea
-    background-color: $white
-    border: 1px solid $border
-    font-size: calc-rem(14px)
+    background-color: $textarea-background-color
+    border: 1px solid $textarea-border-color
+    font-size: calc-rem($textarea-font-size)
     max-width: 100%
     min-height: calc-rem(40px)
     padding: .5rem
     width: 100%
 
     &:hover
-      border-color: $border
+      border-color: $textarea-hover-border-color
 
   select
     appearance: none
@@ -123,7 +147,7 @@ form
     background-position: 98% center
     background-repeat: no-repeat
     background-size: 1rem
-    font-size: calc-rem(14px)
+    font-size: calc-rem($textarea-font-size)
     padding-right: 2rem
     width: 100%
 
@@ -131,12 +155,18 @@ form
       animation: focus 1s ease-in-out
 
     option
-      font-size: calc-rem(14px)
+      font-size: calc-rem($select-option-font-size)
 
-// Description
+// ----------------------------------
+
+// DESCRIPTION
+
+$description-color: $grey
+$description-font-size: 14px
+
 .description
-  color: $grey
-  font-size: calc-rem(14px)
+  color: $description-color
+  font-size: calc-rem($description-font-size)
   font-style: italic
   font-weight: normal
   margin: .25rem 0
@@ -147,6 +177,10 @@ form
     font-weight: inherit
     margin: 0
 
+// ----------------------------------
+
+// FORM TYPES
+
 .form-type
   &-radio,
   &-checkbox
@@ -156,23 +190,38 @@ form
     input
       margin-right: 5px
 
-// Password strength
+// ----------------------------------
+
+// PASSWORD STRENGTH
+
+$password-strength-font-size: 12px
+
 .password-strength
-  font-size: .85rem
+  font-size: calc-rem($password-strength-font-size)
   margin: .5rem 0
 
-// Machine name
+// ----------------------------------
+
+// MACHINE NAME
+
+$field-suffix-color: $secondary-color
+$field-suffix-font-size: 10px
+
 .field-suffix
   margin-left: 5px
 
   .link
-    color: $secondary-color
-    font-size: .65em
+    color: $field-suffix-color
+    font-size: calc-rem($field-suffix-font-size)
     margin-left: calc-rem(10px)
     text-transform: uppercase
 
-// Check boxes & radios
+// ----------------------------------
+
+// CHECK BOXES & RADIOS
 .form-checkboxes,
 .form-radios
   .form-item
     margin: 0 .5rem .5rem 0
+
+// ----------------------------------
