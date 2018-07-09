@@ -1,35 +1,14 @@
 // Buttons
-$button-background-color: $secondary-color
-$button-hover-background-color: $white
-$button-color: $white
-$button-hover-color: $secondary-color
-$button-font-family: $roboto-condensed
-$button-border-radius: 3px
-$button-border-color: transparent
-$button-hover-border-color: $secondary-color
 
 .button
-  background-color: $button-background-color
-  border: 1px solid $button-border-color
-  border-radius: $button-border-radius
-  color: $button-color
-  display: inline-block
-  font-family: $button-font-family
-  font-weight: 400
-  line-height: 1
-  margin: 0
-  outline: none
-  padding: .75rem 1.5rem
-  text-align: center
-  transition: all .5s
+  +button(primary)
 
-  &:hover
-    background-color: $button-hover-background-color
-    border-color: $button-hover-border-color
-    color: $button-hover-color
-    cursor: pointer
-    text-decoration: none
+  &--secondary
+    +button(secondary)
+
+  &:disabled
+    opacity: .6
+    pointer-events: none
 
   &:focus
     outline: none
-
