@@ -56,12 +56,15 @@ var sassDocOptions = {
 gulp.task('default', function () {
   console.log('');
   console.log('Cleaning tasks'.yellow);
-  console.log('gulp ' + 'clean:styles'.cyan + '                           ' + '# Clean css files from css directory'.grey);
+  console.log('gulp ' + 'clean:styles'.cyan + '                        ' + '# Clean css files from css directory'.grey);
+  console.log('gulp ' + 'clean:images'.cyan + '                        ' + '# Clean image files from images directory'.grey);
   console.log('');
   console.log('Compiling tasks'.yellow);
   console.log('gulp ' + 'imagemin'.cyan + '                            ' + '# Minifiy your images in ./src/images into ./images'.grey);
-  console.log('gulp ' + 'mainStyles:dev'.cyan + '                          ' + '# Compile expanded css and create a maps file.'.grey);
-  console.log('gulp ' + 'mainStyles:pro'.cyan + '                          ' + '# Compile compressed css, apply autoprefixer to result.'.grey);
+  console.log('gulp ' + 'mainStyles:dev'.cyan + '                      ' + '# Compile expanded css except "pages" directory and create a maps file.'.grey);
+  console.log('gulp ' + 'pageStyles:dev'.cyan + '                      ' + '# Compile expanded css from "pages" directory exclusively and create a maps file.'.grey);
+  console.log('gulp ' + 'mainStyles:pro'.cyan + '                      ' + '# Compile compressed css except "pages" directory, apply autoprefixer to result.'.grey);
+  console.log('gulp ' + 'pageStyles:pro'.cyan + '                      ' + '# Compile compressed css from "pages" directory exclusively, apply autoprefixer to result.'.grey);
   console.log('');
   console.log('Utils tasks'.yellow);
   console.log('gulp ' + 'clean:sassdoc'.cyan + '                       ' + '# Clean sassdoc directory.'.grey);
@@ -73,12 +76,13 @@ gulp.task('default', function () {
   console.log('');
   console.log('Watching tasks'.yellow);
   console.log('gulp ' + 'watch'.cyan + '                              ' + '# Run a defined tasks if any specified files are changed.'.grey);
-  console.log('gulp ' + 'watch -h'.cyan + ' yourhost'.green + '                  ' + '# Modifies your host to use BrowserSync.'.grey);
+  console.log('gulp ' + 'watch -h'.cyan + ' yourhost'.green + '       ' + '# Modifies your host to use BrowserSync.'.grey);
   console.log('gulp ' + 'browsersync'.cyan + '                        ' + '# Synchronize browser and device in realtime and reload browser if any specified files are changed.'.grey);
   console.log('');
   console.log('Developing task'.yellow);
-  console.log('gulp ' + 'dev:browser'.cyan + '                        ' + '# Run mainStyles:dev to compile to development enviroment, run jshint and run browserSync to synchronize browser.'.grey);
-  console.log('gulp ' + 'pro'.cyan + '                                ' + '# Run mainStyles:pro to compile to production enviroment, run jshint and run sassdoc.'.grey);
+  console.log('gulp ' + 'dev:watch'.cyan + '                          ' + '# Run a development task list: imagemin, mainStyles:dev, pagesStyles:dev and watch.'.grey);
+  console.log('gulp ' + 'dev:browser'.cyan + '                        ' + '# Run a development task list: imagemin, mainStyles:dev, pagesStyles:dev and browserSync.'.grey);
+  console.log('gulp ' + 'pro'.cyan + '                                ' + '# Run a production task list: imagemin, mainStyles:pro, pagesStyles:pro, sassdoc.'.grey);
   console.log('');
   console.log('Watching task example'.yellow);
   console.log('gulp ' + 'watch -h'.cyan + ' localhost'.green + '      ' + '# To configure hosts as mytheme.local.'.grey);
@@ -88,6 +92,7 @@ gulp.task('default', function () {
 
 /************* CLEANING *****************/
 
+// Clean css
 gulp.task('clean:styles', function () {
   return del([
     distAssets.styles + '*.css',
@@ -109,6 +114,7 @@ gulp.task('clean:images', function () {
 });
 
 /************* COMPILING *****************/
+
 // Minify images
 gulp.task('imagemin', ['clean:images'], () =>
   gulp.src(srcAssets.images + '*')
@@ -137,7 +143,7 @@ gulp.task('imagemin', ['clean:images'], () =>
   .pipe(gulp.dest(distAssets.images))
 );
 
-// Css to development
+// Main styles to development
 gulp.task('mainStyles:dev', function () {
   return gulp.src([
       '!' + srcAssets.styles + 'pages/**/*.s+(a|c)ss',
@@ -154,7 +160,7 @@ gulp.task('mainStyles:dev', function () {
     .pipe(browserSync.stream());
 });
 
-// Css to development
+// Pages styles to development
 gulp.task('pagesStyles:dev', function () {
   return gulp.src(srcAssets.styles + 'pages/**/*.s+(a|c)ss')
     .pipe(sourceMaps.init())
@@ -168,7 +174,7 @@ gulp.task('pagesStyles:dev', function () {
     .pipe(browserSync.stream());
 });
 
-// Css to producction
+// Main styles to producction
 gulp.task('mainStyles:pro', function () {
   return gulp.src([
       '!' + srcAssets.styles + 'pages/**/*.s+(a|c)ss',
@@ -187,21 +193,7 @@ gulp.task('mainStyles:pro', function () {
     .pipe(gulp.dest(distAssets.styles));
 });
 
-gulp.task('pagesStyles:pro', function () {
-  return gulp.src(srcAssets.styles + 'pages/**/*.s+(a|c)ss')
-    .pipe(sassGlob())
-    .pipe(sass({
-      errLogToConsole: true,
-      outputStyle: 'compressed'
-    }).on('error', sass.logError))
-    .pipe(postCss([
-      autoprefixer({
-        browsers: ['> 1%', 'ie 8', 'last 2 versions']
-      })
-    ]))
-    .pipe(gulp.dest(distAssets.styles));
-});
-
+// Pages styles to producction
 gulp.task('pagesStyles:pro', function () {
   return gulp.src(srcAssets.styles + 'pages/**/*.s+(a|c)ss')
     .pipe(sassGlob())
@@ -294,7 +286,7 @@ gulp.task('browsersync', function () {
     open: openPath,
     proxy: path
   });
-  gulp.watch(srcAssets.styles + '**/*.s+(a|c)ss', ['mainStyles:dev'])
+  gulp.watch(srcAssets.styles + '**/*.s+(a|c)ss', ['mainStyles:dev', 'pagesStyles:dev'])
     .on('change', function (event) {
       console.log('');
       console.log('-> File ' + event.path.magenta.bold + ' was ' + event.type.green + ', running tasks...');
@@ -371,12 +363,9 @@ gulp.task('jsHintReport', function () {
 
 /************** TIME TO WORK ***********************/
 
-// Init enviroment
-gulp.task('init', ['clean:styles', 'imagemin', 'mainStyles:dev', 'pagesStyles:dev']);
-
 // Development enviroment
 gulp.task('dev:watch', ['imagemin', 'mainStyles:dev', 'pagesStyles:dev', 'watch']);
-gulp.task('dev:browsersync', ['mainStyles:dev', 'pagesStyles:dev', 'browsersync']);
+gulp.task('dev:browsersync', ['imagemin', 'mainStyles:dev', 'pagesStyles:dev', 'browsersync']);
 
 // Production enviroment
-gulp.task('pro', ['clean:styles', 'mainStyles:pro', 'pagesStyles:pro', 'jshint']);
+gulp.task('pro', ['imagemin', 'mainStyles:pro', 'pagesStyles:pro', 'sassdoc']);
