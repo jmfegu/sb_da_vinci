@@ -10,7 +10,7 @@ dependencies:
     - da_vinci
 id: da_vinci_user_account_menu
 theme: da_vinci
-region: secondary_menu
+region: top_bar
 weight: 0
 provider: null
 plugin: 'system_menu_block:account'

@@ -10,7 +10,7 @@ _core:
   default_config_hash: RhSxk4BMoefkTbhN694aeHQJcU2w7_HXKbQdDNCPqTs
 id: da_vinci_branding
 theme: da_vinci
-region: header
+region: main_navigation
 weight: -7
 provider: null
 plugin: system_branding_block

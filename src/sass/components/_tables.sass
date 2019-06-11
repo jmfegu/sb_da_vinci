@@ -1,8 +1,8 @@
 // Tables.
-$table-th-background-color: tint($grey, 75%)
+$table-th-bg-color: tint($grey, 75%)
 $table-th-color: shade($grey, 20%)
-$table-tbody-tr-background-color: $white
-$table-tbody-tr-hover-background-color: tint($grey, 90%)
+$table-tbody-tr-bg-color: $white
+$table-tbody-tr-hover-bg-color: tint($grey, 90%)
 $table-tbody-tr-box-shadow-color: tint($grey, 75%)
 
 table
@@ -21,7 +21,7 @@ table
       padding: 0
 
   th
-    background-color: $table-th-background-color
+    background-color: $table-th-bg-color
     color: $table-th-color
     font-size: calc-rem(12px)
     font-weight: 700
@@ -32,10 +32,10 @@ table
 
   tbody
     tr
-      background-color: $table-tbody-tr-background-color
+      background-color: $table-tbody-tr-bg-color
       box-shadow: inset 0 0 0 1px $table-tbody-tr-box-shadow-color
 
       &:hover
-        background-color: $table-tbody-tr-hover-background-color
+        background-color: $table-tbody-tr-hover-bg-color
 
 

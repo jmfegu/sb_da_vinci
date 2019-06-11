@@ -1,6 +1,6 @@
 // Breadcrumb nav.
 $breadcrumb-color: $secondary-color
-$breadcrumb-link-color: $main-color
+$breadcrumb-link-color: $primary-color
 $breadcrumb-hover-link-color: tint($breadcrumb-link-color, 15%)
 $breadcrumb-crumb-color: $grey
 $breadcrumb-font-size: 14px
@@ -21,7 +21,7 @@ $breadcrumb-font-size: 14px
       margin-right: .25rem
 
     &:not(:first-child)
-      +icomoon-text($ico-chevron-right, 10px, $breadcrumb-crumb-color)
+      +icomoon-text(seticon(chevron-right), 10px, $breadcrumb-crumb-color)
 
   a
     color: $breadcrumb-link-color

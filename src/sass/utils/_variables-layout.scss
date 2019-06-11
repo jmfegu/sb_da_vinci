@@ -1,0 +1,14 @@
+// Grid
+$layout: (
+  width: 1440px,
+  padding: 1rem,
+  gap: 1rem
+);
+
+// Z index layers
+$z-layers: (
+  default: 1,
+  dropdown: 3000,
+  overlay: 4000,
+  modal: 4001
+);

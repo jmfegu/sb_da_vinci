@@ -1,21 +1,21 @@
 // Main navigation menu.
 $menu-main-link-color: $cream
-$menu-main-link-active-color: $main-color
+$menu-main-link-active-color: $primary-color
 $menu-main-link-font-family-small: $roboto-condensed
-$menu-main-link-font-family-large: $roboto
+$menu-main-link-font-family-lg: $roboto
 
 .menu--main
   border-bottom: 1px solid $cream
   border-top: 1px solid $cream
   padding: 1rem 0
-  +breakpoint($large)
+  +breakpoint(point(lg))
     border: 0
     padding: 0
 
   .menu
     display: flex
     flex-direction: column
-    +breakpoint($large)
+    +breakpoint(point(lg))
       flex-direction: row
       flex-wrap: wrap
 
@@ -25,8 +25,8 @@ $menu-main-link-font-family-large: $roboto
       font-family: $menu-main-link-font-family-small
       font-size: calc-rem(24px)
       font-weight: 700
-      +breakpoint($large)
-        font-family: $menu-main-link-font-family-large
+      +breakpoint(point(lg))
+        font-family: $menu-main-link-font-family-lg
         font-size: calc-rem(14px)
         font-weight: normal
         padding: .5rem
@@ -36,6 +36,6 @@ $menu-main-link-font-family-large: $roboto
       &:hover
         color: $menu-main-link-active-color
 
-        &:after
+        &::after
           transition: .2s
           width: 100%

@@ -14,7 +14,7 @@ $menu-footer-line-color: $menu-footer-link-active-color
       flex-direction: column
       padding: .5rem
 
-      &:after
+      &::after
         background-color: $menu-footer-line-color
         content: ''
         display: block
@@ -27,6 +27,6 @@ $menu-footer-line-color: $menu-footer-link-active-color
       &:hover
         color: $menu-footer-link-active-color
 
-        &:after
+        &::after
           transition: .2s
           width: 100%

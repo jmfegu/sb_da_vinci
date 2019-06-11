@@ -12,7 +12,7 @@ _core:
   default_config_hash: 0P8XPywk3uHjb3k5R7j5l3SQaLyE1TasF72ZyXkKxdU
 id: da_vinci_main_menu
 theme: da_vinci
-region: header
+region: main_navigation
 weight: -6
 provider: null
 plugin: 'system_menu_block:main'

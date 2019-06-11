@@ -45,60 +45,33 @@
  * @see html.html.twig
  */
 #}
+
 <div class="layout-container">
 
+  {% include directory ~ '/templates/partials/header.html.twig' %}
 
-  <header aria-label="{{ 'Site header'|t}}">
-
-    {% if page.top_bar %}
-      <div class="top-bar">
-        {{ page.top_bar }}
-      </div>
-    {% endif %}
-
-    <div class="wrapper-header">
-
-      <div class="site-header">
-
-        {% if page.secondary_menu %}
-          {{ page.secondary_menu }}
-        {% endif %}
-
-        {% if page.header %}
-          {{ page.header }}
-        {% endif %}
-
-      </div>
-
+  {% if page.help|render|striptags %}
+  <div class="help-area">
+    <div class="container">
+      {{ page.help }}
     </div>
-  </header>
-
-  {% if page.sliding_panel %}
-  <aside class="js-menu sliding-panel-content">
-    {{ page.sliding_panel }}
-  </aside>
-  {% endif %}
-
-  {% if page.highlighted %}
-    {{ page.highlighted }}
-  {% endif %}
-
-  {% if page.primary_menu %}
-    {{ page.primary_menu }}
-  {% endif %}
-
-  {% if page.breadcrumb %}
-  <div class="site-breadcrumb">
-    {{ page.breadcrumb }}
   </div>
   {% endif %}
 
-  {% if page.featured_top %}
-    {{ page.featured_top }}
+  {% if page.breadcrumb|render|striptags %}
+  <div class="breadcrumb-area">
+    <div class="container">
+      {{ page.breadcrumb }}
+    </div>
+  </div>
   {% endif %}
 
-  {% if page.help %}
-    {{ page.help }}
+  {% if page.highlighted|render|striptags %}
+  <div class="highlighted-area">
+    <div class="container">
+      {{ page.highlighted }}
+    </div>
+  </div>
   {% endif %}
 
   <main>
@@ -108,15 +81,15 @@
 
       <div class="layout-content">
         {{ page.content }}
-      </div>{# /.layout-content #}
+      </div>
 
-      {% if page.sidebar_first %}
+      {% if page.sidebar_first|render|striptags %}
       <aside class="layout-sidebar-first">
         {{ page.sidebar_first }}
       </aside>
       {% endif %}
 
-      {% if page.sidebar_second %}
+      {% if page.sidebar_second|render|striptags %}
       <aside class="layout-sidebar-second">
         {{ page.sidebar_second }}
       </aside>
@@ -125,29 +98,24 @@
     </div>
   </main>
 
-  {% if page.content_bottom %}
-    {{ page.content_bottom }}
+  {% if page.pre_footer|render|striptags %}
+  <div class="pre-footer-area">
+    <div class="container">
+      {{ page.pre_footer }}
+    </div>
+  </div>
   {% endif %}
 
-  {% if page.footer or page.footer_info %}
-  <footer class="site-footer">
+  {% include directory ~ '/templates/partials/footer.html.twig' %}
 
-    {% if page.footer %}
-    <div class="footer-wrapper">
-      {{ page.footer }}
+  {% if page.sliding_panel|render|striptags %}
+  <div class="sliding-panel-area">
+    <div class="container">
+      {{ page.sliding_panel }}
     </div>
-    {% endif %}
-
-    {% if page.footer_info %}
-    <div class="footer-info-wrapper">
-      {{ page.footer_info }}
-    </div>
-    {% endif %}
-
-  </footer>
+  </div>
   {% endif %}
 
   <div class="back-to-top"></div>
 
-{{ page.convert }}
-</div>{# /.layout-container #}
+</div>

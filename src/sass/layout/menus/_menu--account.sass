@@ -1,6 +1,6 @@
-$account-user-background-color: $main-color
-$account-link-background-color: $main-color
-$account-link-background-color-hover: shade($account-link-background-color, 15%)
+$account-user-bg-color: $primary-color
+$account-link-bg-color: $primary-color
+$account-link-bg-color-hover: shade($account-link-bg-color, 15%)
 
 .menu--account
   position: relative
@@ -12,12 +12,12 @@ $account-link-background-color-hover: shade($account-link-background-color, 15%)
       visibility: visible
 
     h2
-      &:before
+      &::before
         font-size: 25px
         text-shadow: 1px 1px $black
 
   h2
-    +icomoon($ico-user, 18px, $white, 32px, $account-user-background-color)
+    +icomoon(seticon(user), 18px, $white, 32px, $account-user-bg-color)
     cursor: pointer
     font-weight: normal
     margin: 0
@@ -33,12 +33,12 @@ $account-link-background-color-hover: shade($account-link-background-color, 15%)
     width: 100vw
 
     a
-      background-color: $account-link-background-color
+      background-color: $account-link-bg-color
       color: $white
       display: block
       padding: .75rem
       transition: .2s
 
       &:hover
-        background-color: $account-link-background-color-hover
+        background-color: $account-link-bg-color-hover
         transition: .2s

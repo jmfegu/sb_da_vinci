@@ -1,6 +1,6 @@
 // Branding block.
 $site-name-link-color: $white
-$site-name-link-hover-color: $light-color
+$site-name-link-hover-color: $light-grey
 
 .block-system-branding-block
   align-items: center
@@ -13,7 +13,7 @@ $site-name-link-hover-color: $light-color
     z-index: 999
 
   .site-name
-    +breakpoint(0 $medium)
+    +breakpoint(0 point(md) - 1)
       display: none
 
     a
