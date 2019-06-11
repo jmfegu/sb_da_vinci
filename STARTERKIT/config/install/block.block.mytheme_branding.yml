@@ -1,4 +1,4 @@
-uuid: 
+uuid:
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ _core:
   default_config_hash: RhSxk4BMoefkTbhN694aeHQJcU2w7_HXKbQdDNCPqTs
 id: mytheme_branding
 theme: mytheme
-region: header
+region: main_navigation
 weight: -7
 provider: null
 plugin: system_branding_block

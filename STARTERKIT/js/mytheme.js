@@ -8,8 +8,6 @@
 (function ($) {
   Drupal.behaviors.mythemeTheme = {
     attach: function (context) {
-
-      
     }
   };
 })(jQuery);

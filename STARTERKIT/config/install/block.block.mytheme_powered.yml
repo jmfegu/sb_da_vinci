@@ -1,4 +1,4 @@
-uuid: 
+uuid:
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ _core:
   default_config_hash: JnwTr87kloIw9cQKhapZE0hhjzDCOr0qtSl2C9Ziaig
 id: mytheme_powered
 theme: mytheme
-region: footer_info
+region: footer
 weight: -7
 provider: null
 plugin: system_powered_by_block

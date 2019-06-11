@@ -1,22 +1,19 @@
 @charset 'utf-8'
 
-// Resources (Dev libraries & utils)
+// Libsass {Libraries}.
+//@import '../../node_modules/slick-carousel/slick/slick.scss'
+
+// Fonts
+@import 'utils/fonts'
+
+// Resources (Dev dependencies & utils)
 @import 'resources'
 
-// Base {External component}.
-@import 'base/skinr'
+// Base.
+@import 'base/**/*'
 
-// Components {Drupal components}.
-@import 'components/*'
+// Components.
+@import 'components/**/*'
 
 // Layout Regions {Blocks, Forms, Nodes, Regions, Pages & Views}.
-@import 'layout/blocks/**/*'
-@import 'layout/forms/*'
-@import 'layout/menus/*'
-@import 'layout/nodes/*'
-@import 'layout/panels/*'
-@import 'layout/paragraphs/*'
-@import 'layout/regions/*'
-@import 'layout/templates/*'
-@import 'layout/views/*'
-@import 'layout/layout'
+@import 'layout/**/*'

@@ -28,12 +28,4 @@ function mytheme_preprocess_html(&$variables) {
     $variables['#attached']['library'][] = 'mytheme/front';
   }
 
-  // Load Libraries for Path.
-  if (!empty(isset($path_args[2])))  {
-    $variables['#attached']['library'][] = 'mytheme/' .$path_args[1] . '-' . $path_args[2];
-  }
-  else {
-    $variables['#attached']['library'][] = 'mytheme/' . $path_args[1];
-  }
-
 }

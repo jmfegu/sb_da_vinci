@@ -1,4 +1,4 @@
-uuid: 
+uuid:
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ dependencies:
     - mytheme
 id: mytheme_user_account_menu
 theme: mytheme
-region: secondary_menu
+region: top_bar
 weight: 0
 provider: null
 plugin: 'system_menu_block:account'

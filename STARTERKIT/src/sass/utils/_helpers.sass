@@ -4,101 +4,73 @@
 /// @group helpers
 ////
 
-/// Hide element.
+.absolute-link
+  background: none
+  display: block
+  font-size: 0
+  height: 100%
+  left: 0
+  margin: 0
+  padding: 0
+  position: absolute
+  top: 0
+  width: 100%
+
+  &:hover
+    background: none
+
 .hide-element
   visibility: hidden
 
-/// Hide accessible.
 .hide-accessible
   color: transparent
   font-size: 0
+  height: 0
   line-height: 0
+  margin: 0
+  overflow: hidden
+  padding: 0
 
-.pulse
-  animation-name: pulse
+.container
+  +container
 
-.typing
-  animation-name: typing
+.clearfix
+  &::after
+    clear: both
+    content: ''
+    display: table
 
-.blink-caret
-  animation-name: blink-caret
+.clean-list
+  list-style-image: none
+  list-style-position: inside
+  list-style-type: none
+  margin: 0
+  padding: 0
 
-.fade-in
-  animation-name: fadeIn
+.cover
+  display: block
+  height: 100%
+  left: 0
+  position: absolute
+  top: 0
+  width: 100%
 
-.fade-out
-  animation-name: fadeOut
+.image-cover
+  overflow: hidden
+  position: relative
 
-.fade-in-up
-  animation-name: fadeInUp
+  img
+    height: auto
+    left: 50%
+    max-width: none
+    min-height: 100%
+    min-width: 100%
+    position: absolute
+    top: 50%
+    transform: translate(-50%, -50%)
+    width: auto
 
-.fade-in-down
-  animation-name: fadeInDown
-
-.fade-in-left
-  animation-name: fadeInLeft
-
-.fade-in-right
-  animation-name: fadeInRight
-
-.fade-in-up-big
-  animation-name: fadeInUpBig
-
-.fade-in-down-big
-  animation-name: fadeInDownBig
-
-.fade-in-left-big
-  animation-name: fadeInLeftBig
-
-.fade-in-right-big
-  animation-name: fadeInRightBig
-
-.fade-out-down
-  animation-name: fadeOutDown
-
-.fade-out-up
-  animation-name: fadeOutUp
-
-.fade-out-left
-  animation-name: fadeOutLeft
-
-.fade-out-right
-  animation-name: fadeOutRight
-
-.fade-out-up-big
-  animation-name: fadeOutUpBig
-
-.fade-out-down-big
-  animation-name: fadeOutDownBig
-
-.fade-out-left-big
-  animation-name: fadeOutLeftBig
-
-.fade-out-right-big
-  animation-name: fadeOutRightBig
-
-.flip
-  animation-name: flip
-  backface-visibility: visible !important
-
-.flip-in-x
-  animation-name: flipInX
-  backface-visibility: visible !important
-
-.flip-out-x
-  animation-name: flipOutX
-  backface-visibility: visible !important
-
-.flip-in-y
-  animation-name: flipInY
-  backface-visibility: visible !important
-
-.flip-out-y
-  animation-name: flipOutY
-  backface-visibility: visible !important
-
-.bounce
-  animation-name: bounce
-
-.border-dance
-  animation-name: border-dance
+.card
+  background-color: $white
+  border-radius: 5px
+  padding: 1rem 2rem

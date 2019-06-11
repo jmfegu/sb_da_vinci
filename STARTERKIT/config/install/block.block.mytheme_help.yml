@@ -1,4 +1,4 @@
-uuid: 
+uuid:
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ _core:
   default_config_hash: ws_wACFj-XWP1qMNDk1-zwPh1LrGEY96P90KVM17S0c
 id: mytheme_help
 theme: mytheme
-region: content
+region: help
 weight: -7
 provider: null
 plugin: help_block
