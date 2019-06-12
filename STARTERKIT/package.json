@@ -1,10 +1,10 @@
 {
-  "name": "davinciworkflow",
+  "name": "mythemeworkflow",
   "version": "2.0.0",
-  "description": "Da Vinci dependencies",
+  "description": "mytheme dependencies",
   "main": "index.js",
   "scripts": {
-    "postinstall": "sudo ./postinstall.sh",
+    "postinstall": "chmod +x postinstall.sh && sudo ./postinstall.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "@ladrupalera",

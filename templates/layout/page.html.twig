@@ -48,7 +48,7 @@
 
 <div class="layout-container">
 
-  {% include directory ~ '/templates/partials/header.html.twig' %}
+  {% include '@da_vinci/partials/header.html.twig' %}
 
   {% if page.help|render|striptags %}
   <div class="help-area">
@@ -106,7 +106,7 @@
   </div>
   {% endif %}
 
-  {% include directory ~ '/templates/partials/footer.html.twig' %}
+  {% include '@da_vinci/partials/footer.html.twig' %}
 
   {% if page.sliding_panel|render|striptags %}
   <div class="sliding-panel-area">

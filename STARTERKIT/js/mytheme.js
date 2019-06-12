@@ -1,6 +1,6 @@
 /**
  * @file
- * My theme Custom Code of the javascript behaviour.
+ * mytheme Custom Code of the javascript behaviour.
  */
 
 'use strict';
