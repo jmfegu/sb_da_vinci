@@ -1,8 +1,6 @@
 // Main navigation menu.
 $menu-main-link-color: $cream
 $menu-main-link-active-color: $primary-color
-$menu-main-link-font-family-small: $roboto-condensed
-$menu-main-link-font-family-lg: $roboto
 
 .menu--main
   border-bottom: 1px solid $cream
@@ -22,11 +20,9 @@ $menu-main-link-font-family-lg: $roboto
     a
       align-items: center
       color: $menu-main-link-color
-      font-family: $menu-main-link-font-family-small
       font-size: calc-rem(24px)
       font-weight: 700
       +breakpoint(point(lg))
-        font-family: $menu-main-link-font-family-lg
         font-size: calc-rem(14px)
         font-weight: normal
         padding: .5rem

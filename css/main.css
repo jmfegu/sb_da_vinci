@@ -414,7 +414,7 @@ html {
 body {
   background-color: #faf8f4;
   color: #9fa9b2;
-  font-family: "Roboto", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   line-height: 1.4;
 }
@@ -426,7 +426,6 @@ h4,
 h5,
 h6 {
   color: #081a2b;
-  font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
   margin: 0;
 }
@@ -548,7 +547,7 @@ blockquote {
 
 blockquote * {
   color: #9fa9b2;
-  font-family: "Roboto", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.125rem;
   font-style: italic;
   line-height: 1.6;
@@ -1483,14 +1482,12 @@ body {
 .menu--main .menu a {
   align-items: center;
   color: #faf8f4;
-  font-family: "Roboto Condensed", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
 }
 
 @media (min-width: 992px) {
   .menu--main .menu a {
-    font-family: "Roboto", sans-serif;
     font-size: 0.875rem;
     font-weight: normal;
     padding: .5rem;
