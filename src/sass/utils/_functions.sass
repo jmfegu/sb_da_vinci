@@ -49,21 +49,6 @@
 /// @param {Number} $icon - Icon to set
 /// @return {}
 
-@function seticon($icon)
-  @if not map-has-key($icons, $icon)
-    @warn 'No icon found for `#{$icon}` in $icons map. Property omitted.'
-  @return map-get($icons, $icon)
-
-/// Set layer from $layer map
-/// @access public
-/// @param {Number} $layer - Layer to get
-/// @return {}
-
-@function layer($layer)
-  @if not map-has-key($z-layers, $layer)
-    @warn 'No layer found for `#{$layer}` in $z-layers map. Property omitted.'
-  @return map-get($z-layers, $layer)
-
 /// Set point from $point map
 /// @access public
 /// @param {Number} $point - Point to get

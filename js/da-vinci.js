@@ -34,7 +34,7 @@
         }
         return url;
       }
-      
+
     }
   };
 })(jQuery);
